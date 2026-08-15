@@ -66,7 +66,7 @@ h1 span { display:inline-block; color:#e8c978; background:linear-gradient(180deg
 .menu-gallery-photo { width:100%; min-height:0; aspect-ratio:4/5; }
 .menu-gallery-photo .slot-note { min-width:0; width:calc(100% - 28px); padding:15px 10px; }
 .menu-gallery-photo .slot-note strong { font-size:11px; }
-.menu-gallery-copy { position:relative; min-height:220px; display:flex; padding:20px 20px 18px; flex-direction:column; }
+.menu-gallery-copy { position:relative; min-height:178px; display:flex; padding:18px 20px 16px; flex-direction:column; }
 .menu-gallery-copy>small { color:var(--wine); font:8px Arial,sans-serif; letter-spacing:.27em; }
 .menu-gallery-copy h3 { margin:8px 0 7px; font-size:18px; font-weight:400; line-height:1.45; }
 .menu-gallery-copy p { min-height:40px; margin:0 0 15px; color:#71675e; font-size:11px; line-height:1.75; }
@@ -219,7 +219,9 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .menu-gallery-window { scroll-padding-inline:16vw; }
   .menu-gallery-card { width:68vw; max-width:280px; }
   .menu-gallery-set { padding-right:16vw; padding-left:16vw; }
-  .menu-gallery-copy { min-height:215px; padding:18px; }
+  .menu-gallery-copy { min-height:168px; padding:14px 16px 15px; }
+  .menu-gallery-copy h3 { margin:6px 0 5px; line-height:1.38; }
+  .menu-gallery-copy p { min-height:0; margin-bottom:0; line-height:1.6; }
   .section { padding:82px 24px; }
   .intro-grid,.access { grid-template-columns:1fr; gap:30px; }
   h2 { font-size:34px; }
