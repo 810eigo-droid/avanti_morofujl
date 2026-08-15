@@ -156,9 +156,9 @@ export default function Home() {
           </article>
         </div>
         <div className="menu-note">
-          <strong>PARTY PLAN</strong>
-          <p>飲み放題付きプラン <b>5,500円（税込）〜</b></p>
-          <span>ご予算に応じたコース・貸切も承ります。お電話でご相談ください。</span>
+          <div className="plan-title"><small>RECOMMENDED</small><strong>PARTY PLAN</strong><span>いちばん人気のプラン</span></div>
+          <p className="plan-price"><span>飲み放題付きプラン</span><b><em>5,500</em>円<small>（税込）〜</small></b></p>
+          <div className="plan-details"><p>ご予算に応じたコース・貸切も承ります。<br />まずはお気軽にお電話でご相談ください。</p><a href={`tel:${phone.replaceAll("-", "")}`}><span>電話で相談する</span>{phone}</a></div>
         </div>
       </section>
 
