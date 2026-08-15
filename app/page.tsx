@@ -119,11 +119,21 @@ export default function Home() {
         <div className="menu-gallery-dots" aria-label="料理写真を選ぶ">
           {menuSlides.map((slide, index) => <button className={index === 0 ? "is-active" : ""} type="button" data-slide={index} aria-label={`${slide.number} ${slide.title}`} aria-current={index === 0 ? "true" : undefined} key={slide.number} />)}
         </div>
-        <div className="menu-note">
-          <div className="plan-title"><small>RECOMMENDED</small><strong>PARTY PLAN</strong><span>いちばん人気のプラン</span></div>
-          <p className="plan-price"><span>飲み放題付きプラン</span><b><em>5,500</em>円<small>（税込）〜</small></b></p>
-          <div className="plan-details"><p>ご予算に応じたコース・貸切も承ります。<br />まずはお気軽にお電話でご相談ください。</p><a href={`tel:${phone.replaceAll("-", "")}`}><span>電話で相談する</span>{phone}</a></div>
-        </div>
+        <section className="party-plan-feature" aria-labelledby="party-plan-title">
+          <div className="party-plan-visual">
+            <ImageSlot src="/images/5500.webp" name="5500.webp" size="正方形推奨 1200 × 1200px" className="party-plan-photo" />
+            <span className="party-plan-ribbon">MOST POPULAR</span>
+          </div>
+          <div className="party-plan-content">
+            <div className="party-plan-heading"><span>RECOMMENDED PARTY PLAN</span><h2 id="party-plan-title">人気の<br />飲み放題付きコース</h2><p>4名様より・お電話でのご予約限定</p></div>
+            <div className="party-plan-prices"><div><small>女性</small><strong>5,500</strong><span>円（税込）</span></div><div><small>男性</small><strong>6,000</strong><span>円（税込）</span></div></div>
+            <p className="party-plan-lead">良質なワインと南欧料理を、ゆっくり楽しめる人気プラン。<br />プラス1,000円で、メイン料理を国産牛肉に変更できます。</p>
+            <dl className="party-plan-facts"><div><dt>利用可能人数</dt><dd>4〜17名様</dd></div><div><dt>飲み放題</dt><dd>あり・2時間制</dd></div><div><dt>滞在可能時間</dt><dd>乾杯スタートから2時間15分</dd></div></dl>
+            <div className="party-plan-menu"><h3>COURSE MENU</h3><ul><li>前菜2品<span>5種の鮮魚の豪華カルパッチョを含む</span></li><li>アヒージョ</li><li>パン</li><li>ピッツァ</li><li>パスタ</li><li>お肉<span>＋1,000円で国産牛肉ランプに変更可能</span></li></ul></div>
+            <a className="party-plan-call" href={`tel:${phone.replaceAll("-", "")}`}><small>このコースを電話で予約する</small><strong>{phone}</strong></a>
+            <details className="party-plan-notes"><summary>注意事項を確認する</summary><div><p>飲み放題は2時間制（20分前ラストオーダー）です。</p><p>各コースのご予約は2日前までにご連絡ください。貸切・ご予算などもご相談いただけます。最大17名様まで着席可能です。</p><p>コース内容は一部変更になる場合がございます。</p><p><b>飲み物の例</b><br />ビール、ワイン、カクテル、ハイボール、焼酎、ソフトドリンク、ノンアルコールカクテルなど<br />※ビールは中瓶でお一人様1本まで（ご予約人数分）</p></div></details>
+          </div>
+        </section>
       </section>
 
       <section className="intro section" id="story">
