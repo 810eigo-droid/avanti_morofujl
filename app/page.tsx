@@ -48,7 +48,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-photo" style={{ "--hero-desktop": "url(/images/hero-main.webp)", "--hero-mobile": "url(/images/hero-mobile.webp)" } as React.CSSProperties} role="img" aria-label="店内や料理のメイン写真を入れる場所">
+        <div className="hero-photo" style={{ "--hero-desktop": "url(/images/hero-main.webp)", "--hero-mobile": "url(/images/hero-main-sp.webp)" } as React.CSSProperties} role="img" aria-label="店内や料理のメイン写真を入れる場所">
           <div className="hero-placeholder">
             <span>MAIN PHOTO</span>
             <strong>hero-main.webp</strong>
