@@ -135,7 +135,7 @@
     function pause(){pauseUntil=performance.now()+4500;viewport.classList.remove('is-auto-moving');last=0;}
     function go(index){pause();var inset=innerWidth<=800?innerWidth*.16:innerWidth*.08;viewport.scrollTo({left:Math.max(0,cards[index].offsetLeft-inset),behavior:'smooth'});mark(index);}
     function update(){raf=0;var inset=innerWidth<=800?innerWidth*.16:innerWidth*.08;var target=((viewport.scrollLeft+inset-origin)%cycle+cycle)%cycle+origin;var nearest=0,distance=Infinity;cards.forEach(function(card,i){var value=Math.abs(card.offsetLeft-target);if(value<distance){distance=value;nearest=i;}});mark(nearest);}
-    function animate(time){if(!reduced&&time>=pauseUntil&&!document.hidden){viewport.classList.add('is-auto-moving');if(last){viewport.scrollLeft+=(time-last)*.012;if(viewport.scrollLeft>=cycle)viewport.scrollLeft-=cycle;}last=time;}else{last=0;}requestAnimationFrame(animate);}
+    function animate(time){if(!reduced&&time>=pauseUntil&&!document.hidden){viewport.classList.add('is-auto-moving');if(last){viewport.scrollLeft+=(time-last)*.016;if(viewport.scrollLeft>=cycle)viewport.scrollLeft-=cycle;}last=time;}else{last=0;}requestAnimationFrame(animate);}
     dots.forEach(function(dot,i){dot.addEventListener('click',function(){go(i);});});
     viewport.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(update);},{passive:true});
     viewport.addEventListener('pointerdown',pause,{passive:true});
