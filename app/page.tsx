@@ -175,7 +175,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="access section" id="access">
+      <section className="access section" id="access" style={{ "--access-bg": "url(/images/access-bg.webp)" } as React.CSSProperties}>
         <div className="access-info">
           <span className="section-kicker">INFORMATION</span>
           <h2>ワイン食堂<br />アバンティ モロフジ</h2>
@@ -186,16 +186,15 @@ export default function Home() {
             <div><dt>お席</dt><dd>17席／全席禁煙／貸切可</dd></div>
           </dl>
           <div className="social-links">
-            <a href={externalLinks.instagram} target="_blank" rel="noreferrer">Instagram ↗</a>
-            <a href={externalLinks.tabelog} target="_blank" rel="noreferrer">食べログ ↗</a>
-            <a href={externalLinks.gnavi} target="_blank" rel="noreferrer">ぐるなび ↗</a>
+            <a className="social-badge social-instagram" href={externalLinks.instagram} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">IG</span><span className="social-copy"><small>公式SNS</small><strong>Instagram</strong></span><b aria-hidden="true">↗</b></a>
+            <a className="social-badge social-tabelog" href={externalLinks.tabelog} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">食</span><span className="social-copy"><small>予約・口コミ</small><strong>食べログ</strong></span><b aria-hidden="true">↗</b></a>
+            <a className="social-badge social-gnavi" href={externalLinks.gnavi} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">ぐ</span><span className="social-copy"><small>店舗情報</small><strong>ぐるなび</strong></span><b aria-hidden="true">↗</b></a>
           </div>
         </div>
-        <a className="map" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6" target="_blank" rel="noreferrer">
-          <span>KURUME</span>
-          <div className="map-pin">A</div>
-          <strong>Google Mapsで開く ↗</strong>
-        </a>
+        <div className="map">
+          <iframe title="ワイン食堂 アバンティ モロフジ周辺のGoogleマップ" src="https://www.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+          <a className="map-open" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6" target="_blank" rel="noreferrer"><span>Google Maps</span><strong>大きな地図で開く ↗</strong></a>
+        </div>
       </section>
 
       <section className="reservation" style={{ "--reservation-bg": "url(/images/footer-bg.webp)" } as React.CSSProperties}>
