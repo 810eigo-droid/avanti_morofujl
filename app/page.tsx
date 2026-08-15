@@ -81,7 +81,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-facts" aria-label="店舗の特徴">
-          <div><strong>駅から</strong><span>徒歩4分</span></div>
+          <div><strong>西鉄久留米駅から</strong><span>徒歩4分</span></div>
           <div><strong>グラスワイン</strong><span>常時6種〜</span></div>
           <div><strong>お席</strong><span>17席</span></div>
         </div>
