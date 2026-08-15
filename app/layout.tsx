@@ -17,7 +17,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){function check(el){var bg=getComputedStyle(el).backgroundImage;var m=bg.match(/url\\(["']?(.*?)["']?\\)/);if(!m)return;var img=new Image();img.onload=function(){el.classList.add('image-loaded')};img.src=m[1]}document.querySelectorAll('.hero-photo,.image-slot').forEach(check)})();`,
+          }}
+        />
+      </body>
     </html>
   );
 }

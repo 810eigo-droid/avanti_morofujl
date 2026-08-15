@@ -20,6 +20,7 @@ nav a:hover:after { width:100%; }
 .hero-photo:after { content:""; position:absolute; inset:0; opacity:.22; background-image:radial-gradient(circle at 20% 30%,#e8b979 0 1px,transparent 2px),radial-gradient(circle at 80% 60%,#e8b979 0 1px,transparent 2px); background-size:32px 32px,41px 41px; }
 .hero-placeholder { position:absolute; right:7vw; top:50%; transform:translateY(-50%); border:1px solid #ffffff50; padding:30px 42px; text-align:center; color:#ffffffa8; z-index:2; }
 .hero-placeholder span,.slot-note span { display:block; font:10px Arial,sans-serif; letter-spacing:.3em; margin-bottom:10px; }
+.image-loaded > .hero-placeholder,.image-loaded > .slot-note { display:none; }
 .hero-placeholder strong,.slot-note strong { display:block; font:14px monospace; }
 .hero-placeholder small,.slot-note small { display:block; margin-top:7px; font:10px Arial,sans-serif; }
 .hero-shade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(16,11,10,.82) 0%,rgba(16,11,10,.46) 56%,rgba(16,11,10,.16) 100%); }

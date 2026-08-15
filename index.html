@@ -73,5 +73,18 @@
   <footer><div class="brand"><span>WINE SHOKUDO</span>AVANTI MOROFUJI</div><p>© AVANTI MOROFUJI</p></footer>
   <div class="mobile-cta"><a href="tel:0942313360">電話で予約</a><a href="https://tabelog.com/fukuoka/A4008/A400801/40036124/" target="_blank">ネット予約</a></div>
 </main>
+<script>
+(function(){
+  function check(el){
+    var bg=getComputedStyle(el).backgroundImage;
+    var match=bg.match(/url\(["']?(.*?)["']?\)/);
+    if(!match)return;
+    var image=new Image();
+    image.onload=function(){el.classList.add('image-loaded');};
+    image.src=match[1];
+  }
+  document.querySelectorAll('.hero-photo,.image-slot').forEach(check);
+})();
+</script>
 </body>
 </html>
