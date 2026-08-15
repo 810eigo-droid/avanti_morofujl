@@ -2,6 +2,8 @@ const phone = "0942-31-3360";
 
 const externalLinks = {
   instagram: "https://www.instagram.com/wine_avanti_morofujl/",
+  line: "https://page.line.me/vas6118r",
+  facebook: "https://www.facebook.com/avantimorofuji/",
   tabelog: "https://tabelog.com/fukuoka/A4008/A400801/40036124/",
   gnavi: "https://r.gnavi.co.jp/9ku61t3z0000/",
 };
@@ -187,6 +189,8 @@ export default function Home() {
           </dl>
           <div className="social-links">
             <a className="social-badge social-instagram" href={externalLinks.instagram} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">IG</span><span className="social-copy"><small>公式SNS</small><strong>Instagram</strong></span><b aria-hidden="true">↗</b></a>
+            <a className="social-badge social-line" href={externalLinks.line} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">LINE</span><span className="social-copy"><small>友だち追加</small><strong>公式LINE</strong></span><b aria-hidden="true">↗</b></a>
+            <a className="social-badge social-facebook" href={externalLinks.facebook} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">f</span><span className="social-copy"><small>公式ページ</small><strong>Facebook</strong></span><b aria-hidden="true">↗</b></a>
             <a className="social-badge social-tabelog" href={externalLinks.tabelog} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">食</span><span className="social-copy"><small>予約・口コミ</small><strong>食べログ</strong></span><b aria-hidden="true">↗</b></a>
             <a className="social-badge social-gnavi" href={externalLinks.gnavi} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">ぐ</span><span className="social-copy"><small>店舗情報</small><strong>ぐるなび</strong></span><b aria-hidden="true">↗</b></a>
           </div>

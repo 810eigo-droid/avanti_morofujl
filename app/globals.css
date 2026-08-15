@@ -130,8 +130,9 @@ dl>div { display:grid; grid-template-columns:110px 1fr; border-top:1px solid #d6
 dt { font:11px sans-serif; letter-spacing:.12em; color:#776d62; }
 dd { margin:0; font-size:14px; line-height:1.8; }
 dd small { color:#776d62; }
-.social-links { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:32px; font-family:sans-serif; }
-.social-badge { min-width:0; display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:9px; border:1px solid #c9beb0; padding:10px 11px; background:rgba(255,255,255,.78); box-shadow:0 8px 22px #49392a14; transition:transform .2s,border-color .2s,box-shadow .2s; }
+.social-links { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:10px; margin-top:32px; font-family:sans-serif; }
+.social-badge { grid-column:span 2; min-width:0; display:grid; grid-template-columns:34px minmax(0,1fr) auto; align-items:center; gap:9px; border:1px solid #c9beb0; padding:10px 11px; background:rgba(255,255,255,.78); box-shadow:0 8px 22px #49392a14; transition:transform .2s,border-color .2s,box-shadow .2s; }
+.social-badge:nth-child(n+4) { grid-column:span 3; }
 .social-badge:hover { transform:translateY(-3px); border-color:var(--gold); box-shadow:0 12px 28px #49392a24; }
 .social-mark { width:34px; height:34px; display:grid; place-items:center; border-radius:50%; color:white; font:700 10px Arial,sans-serif; letter-spacing:0; }
 .social-copy { min-width:0; display:block; }
@@ -139,6 +140,8 @@ dd small { color:#776d62; }
 .social-copy strong { display:block; overflow:hidden; margin-top:3px; color:#28221f; font:700 11px/1.2 Arial,sans-serif; letter-spacing:.02em; white-space:nowrap; text-overflow:ellipsis; }
 .social-badge>b { color:#8b7d6f; font:13px Georgia,serif; }
 .social-instagram .social-mark { background:linear-gradient(135deg,#6748d5,#c12d78 52%,#e39a34); }
+.social-line .social-mark { background:#06c755; font-size:7px; }
+.social-facebook .social-mark { background:#1877f2; font:700 22px Georgia,serif; }
 .social-tabelog .social-mark { background:#9b2d24; }
 .social-gnavi .social-mark { background:#d66a1f; }
 .map { min-height:590px; position:relative; overflow:hidden; border:1px solid #c8a66a80; background:#e6ded2; box-shadow:0 24px 55px #49392a28; }
@@ -234,7 +237,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .access-info h2 { font-size:32px; }
   dl>div { grid-template-columns:82px 1fr; }
   .social-links { grid-template-columns:1fr; gap:8px; }
-  .social-badge { padding:9px 11px; }
+  .social-badge,.social-badge:nth-child(n+4) { grid-column:1/-1; padding:9px 11px; }
   .map { min-height:390px; }
   .map-open { left:14px; right:14px; bottom:14px; justify-content:center; }
   .reservation { width:100%; min-height:0; aspect-ratio:1537/2752; padding:0; background-image:var(--reservation-bg); }
