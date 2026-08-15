@@ -37,6 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           }}
         />
         <script src="/carousel-autoplay.js" defer />
+        <script src="/text-motion.js" defer />
       </body>
     </html>
   );
