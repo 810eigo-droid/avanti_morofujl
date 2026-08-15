@@ -56,6 +56,7 @@ export default function Home() {
         <nav id="site-nav" aria-label="メインメニュー">
           <a href="#story">お店について</a>
           <a href="#menu">料理とワイン</a>
+          <a href="#hours">営業時間・定休日</a>
           <a href="#access">店舗情報</a>
         </nav>
         <a className="header-call" href={`tel:${phone.replaceAll("-", "")}`}>
@@ -204,7 +205,7 @@ export default function Home() {
           <h2>ワイン食堂<br />アバンティ モロフジ</h2>
           <dl>
             <div><dt>住所</dt><dd>〒830-0032<br />福岡県久留米市東町397-6 1F<br /><small>西鉄久留米駅より徒歩4分</small></dd></div>
-            <div><dt>営業時間</dt><dd>月〜木 18:00–22:30<br />金・土・祝 18:00–23:00<br /><small>料理・ドリンクのL.O.あり／早めに閉店する場合があります</small></dd></div>
+            <div id="hours"><dt>営業時間</dt><dd>月〜木 18:00–22:30<br />金・土・祝 18:00–23:00<br /><small>料理・ドリンクのL.O.あり／早めに閉店する場合があります</small></dd></div>
             <div><dt>定休日</dt><dd>日曜日 <small>（臨時休業あり）</small></dd></div>
             <div><dt>お席</dt><dd>17席／全席禁煙／貸切可</dd></div>
           </dl>
