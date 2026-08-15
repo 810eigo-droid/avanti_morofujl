@@ -8,7 +8,7 @@ const externalLinks = {
 
 const menuSlides = Array.from({ length: 8 }, (_, index) => {
   const number = String(index + 1).padStart(2, "0");
-  return { src: `/images/menu-slide-${number}.webp`, name: `menu-slide-${number}.webp` };
+  return { src: `/images/menu-slide-${number}.webp`, name: `menu-slide-${number}.webp`, number };
 });
 
 function ImageSlot({
@@ -96,7 +96,15 @@ export default function Home() {
             {[0, 1].map((setIndex) => (
               <div className="menu-gallery-set" key={setIndex} aria-hidden={setIndex === 1 ? "true" : undefined}>
                 {menuSlides.map((slide, index) => (
-                  <ImageSlot key={`${setIndex}-${slide.name}`} src={slide.src} name={slide.name} size="推奨 800 × 1000px" className={`menu-gallery-card menu-gallery-card-${(index % 3) + 1}`} />
+                  <article className={`menu-gallery-card menu-gallery-card-${(index % 3) + 1}`} key={`${setIndex}-${slide.name}`}>
+                    <ImageSlot src={slide.src} name={slide.name} size="推奨 800 × 1000px" className="menu-gallery-photo" />
+                    <div className="menu-gallery-copy">
+                      <small>MENU {slide.number}</small>
+                      <h3>料理名が入ります</h3>
+                      <p>料理の特徴を短い文章でご紹介します。</p>
+                      <strong>¥0,000 <em>税込</em></strong>
+                    </div>
+                  </article>
                 ))}
               </div>
             ))}

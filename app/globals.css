@@ -54,11 +54,18 @@ h1 span { font-style:italic; color:#ead7b6; }
 .menu-gallery-track { display:flex; width:max-content; animation:menu-reel 48s linear infinite; }
 .menu-gallery-window:hover .menu-gallery-track { animation-play-state:paused; }
 .menu-gallery-set { display:flex; gap:18px; padding-right:18px; }
-.menu-gallery-card { flex:0 0 auto; width:clamp(190px,20vw,285px); min-height:0; aspect-ratio:4/5; border:1px solid #d3b98540; background-color:#382d29; box-shadow:0 18px 36px #0c07062e; }
+.menu-gallery-card { flex:0 0 auto; width:clamp(210px,21vw,300px); overflow:hidden; border:1px solid #d3b98540; background:#f7f1e8; color:var(--deep); box-shadow:0 18px 36px #0c07062e; }
 .menu-gallery-card-2 { transform:translateY(18px); }
 .menu-gallery-card-3 { transform:translateY(-10px); }
-.menu-gallery-card .slot-note { min-width:0; width:calc(100% - 28px); padding:15px 10px; }
-.menu-gallery-card .slot-note strong { font-size:11px; }
+.menu-gallery-photo { width:100%; min-height:0; aspect-ratio:4/5; }
+.menu-gallery-photo .slot-note { min-width:0; width:calc(100% - 28px); padding:15px 10px; }
+.menu-gallery-photo .slot-note strong { font-size:11px; }
+.menu-gallery-copy { position:relative; min-height:178px; padding:20px 20px 18px; }
+.menu-gallery-copy>small { color:var(--wine); font:8px Arial,sans-serif; letter-spacing:.27em; }
+.menu-gallery-copy h3 { margin:8px 0 7px; font-size:18px; font-weight:400; line-height:1.45; }
+.menu-gallery-copy p { min-height:40px; margin:0 0 15px; color:#71675e; font-size:11px; line-height:1.75; }
+.menu-gallery-copy strong { display:block; border-top:1px solid #d9cfc1; padding-top:12px; color:var(--wine); font:20px Georgia,serif; }
+.menu-gallery-copy strong em { margin-left:5px; color:#83776d; font:8px Arial,sans-serif; font-style:normal; }
 @keyframes menu-reel { to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion:reduce) { .menu-gallery-track { animation:none; } }
 .section { padding:120px 8vw; }
@@ -166,7 +173,8 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#847d75; }
   .menu-gallery-heading>p { margin-top:18px; font-size:12px; }
   .menu-gallery-window { -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
   .menu-gallery-track { animation-duration:38s; }
-  .menu-gallery-card { width:62vw; max-width:260px; }
+  .menu-gallery-card { width:68vw; max-width:280px; }
+  .menu-gallery-copy { min-height:168px; padding:18px; }
   .section { padding:82px 24px; }
   .intro-grid,.access { grid-template-columns:1fr; gap:30px; }
   h2 { font-size:34px; }
