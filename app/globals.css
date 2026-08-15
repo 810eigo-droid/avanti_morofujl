@@ -168,6 +168,10 @@ dd small { color:#776d62; }
 .social-facebook .social-mark { background:#1877f2; font:700 22px Georgia,serif; }
 .social-tabelog .social-mark { background:#9b2d24; }
 .social-gnavi .social-mark { background:#d66a1f; }
+.access-visuals { display:grid; grid-template-rows:auto minmax(360px,1fr); gap:14px; min-width:0; }
+.shop-exterior-wrap { position:relative; overflow:hidden; border:1px solid #c8a66a80; box-shadow:0 16px 38px #49392a20; }
+.shop-exterior { min-height:0; aspect-ratio:2810/1504; background-position:center; }
+.shop-exterior-wrap>span { position:absolute; z-index:3; left:14px; bottom:12px; padding:7px 11px; color:white; background:#121b25e8; font:700 10px sans-serif; letter-spacing:.08em; }
 .map { min-height:590px; position:relative; overflow:hidden; border:1px solid #c8a66a80; background:#e6ded2; box-shadow:0 24px 55px #49392a28; }
 .map iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
 .map-open { position:absolute; z-index:2; left:24px; bottom:24px; display:flex; align-items:center; gap:18px; border:1px solid #c8a66a; padding:12px 16px; color:white; background:#121b25ee; box-shadow:0 10px 28px #0005; font-family:sans-serif; transition:background .2s,transform .2s; }
@@ -276,6 +280,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   dl>div { grid-template-columns:82px 1fr; }
   .social-links { grid-template-columns:1fr; gap:8px; }
   .social-badge,.social-badge:nth-child(n+4) { grid-column:1/-1; padding:9px 11px; }
+  .access-visuals { grid-template-rows:auto 390px; gap:12px; }
   .map { min-height:390px; }
   .map-open { left:14px; right:14px; bottom:14px; justify-content:center; }
   .reservation { width:100%; min-height:0; aspect-ratio:1537/2752; padding:0; background-image:var(--reservation-bg); }

@@ -218,9 +218,15 @@ export default function Home() {
             <a className="social-badge social-gnavi" href={externalLinks.gnavi} target="_blank" rel="noreferrer"><span className="social-mark" aria-hidden="true">ぐ</span><span className="social-copy"><small>店舗情報</small><strong>ぐるなび</strong></span><b aria-hidden="true">↗</b></a>
           </div>
         </div>
-        <div className="map">
+        <div className="access-visuals">
+          <div className="shop-exterior-wrap">
+            <ImageSlot src="/images/shop.webp" name="shop.webp" size="2810 × 1504px" className="shop-exterior" />
+            <span>オレンジ色の外観が目印です</span>
+          </div>
+          <div className="map">
           <iframe title="ワイン食堂 アバンティ モロフジ周辺のGoogleマップ" src="https://www.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
           <a className="map-open" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6" target="_blank" rel="noreferrer"><span>Google Maps</span><strong>大きな地図で開く ↗</strong></a>
+          </div>
         </div>
       </section>
 
