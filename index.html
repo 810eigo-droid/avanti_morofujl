@@ -28,7 +28,7 @@
 <main>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="アバンティ モロフジ トップへ"><img class="header-logo" src="/avanti_morofujl/public/images/logo-main.webp" alt="AVANTI モロフジ"></a>
-    <nav id="site-nav"><a href="#story">お店について</a><a href="#menu">料理とワイン</a><a href="#hours">営業時間・定休日</a><a href="#access">アクセス</a></nav>
+    <nav id="site-nav"><a href="#story">お店について</a><a href="#menu">料理とワイン</a><a href="#hours">営業時間・定休日</a><a href="#map">アクセス</a></nav>
     <a class="header-call" href="tel:0942313360"><small>ご予約・お問い合わせ</small>0942-31-3360</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   </header>
@@ -179,5 +179,6 @@
 <script>
 (function(){var v=document.querySelector('.menu-gallery-window');if(!v||innerWidth>800)return;setTimeout(function(){var sample=v.scrollLeft;setTimeout(function(){if(Math.abs(v.scrollLeft-sample)>2)return;v.classList.add('is-auto-moving');var last=0,pauseUntil=0,cycle=v.scrollWidth/2;function pause(){pauseUntil=performance.now()+4500;last=0}function move(t){if(t>=pauseUntil&&!document.hidden){if(last)v.scrollLeft+=(t-last)*.018;if(v.scrollLeft>=cycle)v.scrollLeft-=cycle;last=t}else last=0;requestAnimationFrame(move)}v.addEventListener('pointerdown',pause,{passive:true});v.addEventListener('touchstart',pause,{passive:true});requestAnimationFrame(move)},1200)},600)})();
 </script>
+<script>document.querySelector('.map')?.setAttribute('id','map');</script>
 </body>
 </html>
