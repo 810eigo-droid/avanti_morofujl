@@ -104,7 +104,8 @@ blockquote { position:absolute; z-index:3; left:7%; bottom:-38px; width:430px; b
 .plan-title strong { display:block; margin:7px 0 9px; color:#f5e5b8; font:26px Georgia,serif; letter-spacing:.12em; }
 .plan-title span { color:#b9b1a5; font-size:10px; letter-spacing:.12em; }
 .plan-price { display:flex; justify-content:center; flex-direction:column; border-right:1px solid #d5af6235; }
-.plan-price>span { color:#e8ded0; font-size:13px; letter-spacing:.08em; }
+.plan-price>span { align-self:flex-start; display:flex; align-items:center; gap:10px; border-left:4px solid var(--sun); padding:7px 11px 7px 12px; color:white; background:linear-gradient(90deg,#ffffff12,transparent); text-shadow:0 2px 8px #0007; font-size:17px; font-weight:700; letter-spacing:.08em; }
+.plan-price>span:after { content:"FREE DRINK"; border:1px solid #d5af6280; padding:3px 5px; color:#f4d88d; font:700 7px Arial,sans-serif; letter-spacing:.13em; white-space:nowrap; }
 .plan-price b { display:block; margin-top:7px; color:#f7e4ad; font-size:18px; font-weight:400; white-space:nowrap; }
 .plan-price b em { margin-right:4px; color:#fff3c7; text-shadow:0 0 24px #d7ac4a80; font:italic 42px Georgia,serif; }
 .plan-price b small { margin-left:3px; color:#c9bda9; font:9px sans-serif; }
@@ -223,6 +224,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .menu-note>div,.plan-price { padding:25px 24px; }
   .plan-title,.plan-price { border-right:0; border-bottom:1px solid #d5af6235; }
   .plan-title strong { font-size:24px; }
+  .plan-price>span { font-size:16px; }
   .plan-price b em { font-size:38px; }
   .plan-details p { margin-bottom:13px; }
   .plan-details a { align-self:stretch; justify-content:center; }
