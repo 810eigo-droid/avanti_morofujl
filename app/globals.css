@@ -79,6 +79,8 @@ h1 span { display:inline-block; color:#e8c978; background:linear-gradient(180deg
 .menu-gallery-dots button.is-active:before { width:20px; border-radius:5px; background:var(--sun); }
 .menu-gallery-dots button:focus-visible { outline:1px solid var(--sun); outline-offset:-2px; }
 .menu-gallery-photo > .image-disclaimer { display:none !important; }
+.party-plan-photo:not(.party-plan-photo-sub) > .image-disclaimer,
+.shop-exterior > .image-disclaimer { display:none !important; }
 .section { padding:120px 8vw; }
 .intro { background:var(--paper); }
 .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:9vw; margin-top:28px; }
