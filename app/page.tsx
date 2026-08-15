@@ -206,7 +206,7 @@ export default function Home() {
         <span>受付は営業時間内／ネット予約は食べログから</span>
       </section>
 
-      <footer>
+      <footer style={{ "--footer-bg": "url(/images/footer-bg.webp)" } as React.CSSProperties}>
         <div className="brand"><span>WINE SHOKUDO</span>AVANTI MOROFUJI</div>
         <p>© AVANTI MOROFUJI</p>
       </footer>

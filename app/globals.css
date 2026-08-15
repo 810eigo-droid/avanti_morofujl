@@ -130,8 +130,10 @@ dd small { color:#776d62; }
 .reservation>a { display:inline-block; border:1px solid #ffffff80; min-width:330px; padding:19px; font:26px Georgia,serif; }
 .reservation>a small { display:block; font:10px sans-serif; letter-spacing:.2em; margin-bottom:6px; }
 .reservation>span { display:block; color:#d8bfc3; font:10px sans-serif; margin-top:15px; }
-footer { height:170px; background:#181614; color:#f4eee5; display:flex; align-items:center; justify-content:space-between; padding:0 8vw; }
-footer p { font:9px sans-serif; letter-spacing:.15em; color:#847d75; }
+footer { position:relative; min-height:250px; overflow:hidden; background-color:#181614; background-image:var(--footer-bg); background-position:center; background-size:cover; color:#f4eee5; display:flex; align-items:center; justify-content:space-between; padding:0 8vw; }
+footer:before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#15100de8 0%,#17100db8 48%,#17100d8c 100%); }
+footer>* { position:relative; z-index:1; }
+footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
 .mobile-cta { display:none; }
 
 @media (max-width:800px) {
@@ -201,7 +203,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#847d75; }
   .map { min-height:390px; }
   .reservation { padding:80px 20px 105px; }
   .reservation>a { min-width:0; width:100%; }
-  footer { height:140px; padding:0 24px 70px; }
+  footer { min-height:210px; padding:0 24px 70px; background-position:center; }
   footer p { display:none; }
   .mobile-cta { display:grid; grid-template-columns:1fr 1fr; position:fixed; z-index:30; bottom:0; left:0; right:0; box-shadow:0 -4px 18px #0004; }
   .mobile-cta a { text-align:center; padding:17px 8px; background:#f3eee5; color:var(--wine); font:bold 13px sans-serif; }
