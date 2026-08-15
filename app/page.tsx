@@ -6,6 +6,11 @@ const externalLinks = {
   gnavi: "https://r.gnavi.co.jp/9ku61t3z0000/",
 };
 
+const menuSlides = Array.from({ length: 8 }, (_, index) => {
+  const number = String(index + 1).padStart(2, "0");
+  return { src: `/images/menu-slide-${number}.webp`, name: `menu-slide-${number}.webp` };
+});
+
 function ImageSlot({
   src,
   name,
@@ -78,6 +83,24 @@ export default function Home() {
           <div><strong>駅から</strong><span>徒歩4分</span></div>
           <div><strong>グラスワイン</strong><span>常時6種〜</span></div>
           <div><strong>お席</strong><span>17席</span></div>
+        </div>
+      </section>
+
+      <section className="menu-gallery" aria-labelledby="menu-gallery-title">
+        <div className="menu-gallery-heading">
+          <div><span className="section-kicker">A TASTE OF AVANTI</span><h2 id="menu-gallery-title">今夜、出会えるひと皿。</h2></div>
+          <p>季節の食材とワインに寄り添う料理を、写真で少しずつご紹介します。</p>
+        </div>
+        <div className="menu-gallery-window">
+          <div className="menu-gallery-track">
+            {[0, 1].map((setIndex) => (
+              <div className="menu-gallery-set" key={setIndex} aria-hidden={setIndex === 1 ? "true" : undefined}>
+                {menuSlides.map((slide, index) => (
+                  <ImageSlot key={`${setIndex}-${slide.name}`} src={slide.src} name={slide.name} size="推奨 800 × 1000px" className={`menu-gallery-card menu-gallery-card-${(index % 3) + 1}`} />
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

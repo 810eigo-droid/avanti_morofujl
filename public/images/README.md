@@ -12,6 +12,14 @@
 | wine-selection.webp | 1000 × 750px | ワインボトルやグラスを並べた写真 |
 | food-main.webp | 1000 × 750px | 肉料理、魚料理、煮込みなど主役の一皿 |
 | interior-wide.webp | 1800 × 1000px | 客席全体・カウンターが分かる横長写真 |
+| menu-slide-01.webp | 800 × 1000px | メニュースライダー1枚目 |
+| menu-slide-02.webp | 800 × 1000px | メニュースライダー2枚目 |
+| menu-slide-03.webp | 800 × 1000px | メニュースライダー3枚目 |
+| menu-slide-04.webp | 800 × 1000px | メニュースライダー4枚目 |
+| menu-slide-05.webp | 800 × 1000px | メニュースライダー5枚目 |
+| menu-slide-06.webp | 800 × 1000px | メニュースライダー6枚目 |
+| menu-slide-07.webp | 800 × 1000px | メニュースライダー7枚目 |
+| menu-slide-08.webp | 800 × 1000px | メニュースライダー8枚目 |
 
 ## 撮影・書き出しのコツ
 
