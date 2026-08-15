@@ -12,9 +12,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://avanti-morofuji-kurume.ricky-o.chatgpt.site/",
     siteName: "ワイン食堂 アバンティ モロフジ",
-    images: [{ url: "/og.png?v=20260815-2", width: 1731, height: 909, alt: "ワイン食堂 アバンティ モロフジ｜西鉄久留米駅から徒歩4分" }],
+    images: [{ url: "/images/og.jpg?v=teams-20260815-1", secureUrl: "https://avanti-morofuji-kurume.ricky-o.chatgpt.site/images/og.jpg?v=teams-20260815-1", type: "image/jpeg", width: 2848, height: 1504, alt: "ワイン食堂 アバンティ モロフジ｜西鉄久留米駅から徒歩4分" }],
   },
-  twitter: { card: "summary_large_image", title: "ワイン食堂 アバンティ モロフジ", description: "西鉄久留米駅から徒歩4分。南欧料理とワインを楽しむ17席の隠れ家。", images: ["/og.png?v=20260815-2"] },
+  twitter: { card: "summary_large_image", title: "ワイン食堂 アバンティ モロフジ", description: "西鉄久留米駅から徒歩4分。南欧料理とワインを楽しむ17席の隠れ家。", images: ["/images/og.jpg?v=teams-20260815-1"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
