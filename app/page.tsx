@@ -17,6 +17,8 @@ const menuSlides = [
   { number: "06", category: "CARNE & PASTA", title: "蝦夷鹿のイタリア仕込みのスーパートスカーナ、モンテアンティコ（赤ワイン）煮込み＆パスタ", description: "赤ワインでじっくり煮込んだ蝦夷鹿をパスタと。" },
   { number: "07", category: "PASTA", title: "カリフラワーと羊のチーズのせ、ピスタチオソースのパスタ", description: "羊のチーズとピスタチオが香るひと皿。" },
   { number: "08", category: "QUICHE", title: "カボチャとサツマイモのキッシュ", description: "カボチャとサツマイモのやさしい甘み。" },
+  { number: "09", category: "PASTA", title: "甘エビとヤリイカのレモンクリームソーススパゲティ", description: "甘エビとヤリイカに、爽やかなレモンクリーム。" },
+  { number: "10", category: "GRATIN", title: "ベルギー風 牛肉と野菜のビール煮込みグラタン", description: "牛肉と野菜をビールで煮込んだベルギー風グラタン。" },
 ].map((slide) => ({ ...slide, src: `/images/menu-slide-${slide.number}.webp`, name: `menu-slide-${slide.number}.webp` }));
 
 function ImageSlot({
