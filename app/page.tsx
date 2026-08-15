@@ -110,6 +110,11 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div className="menu-note">
+          <div className="plan-title"><small>RECOMMENDED</small><strong>PARTY PLAN</strong><span>いちばん人気のプラン</span></div>
+          <p className="plan-price"><span>飲み放題付きプラン</span><b><em>5,500</em>円<small>（税込）〜</small></b></p>
+          <div className="plan-details"><p>ご予算に応じたコース・貸切も承ります。<br />まずはお気軽にお電話でご相談ください。</p><a href={`tel:${phone.replaceAll("-", "")}`}><span>電話で相談する</span>{phone}</a></div>
+        </div>
       </section>
 
       <section className="intro section" id="story">
@@ -154,11 +159,6 @@ export default function Home() {
             <h3>イタリア仕込みの南欧料理</h3>
             <p>素材を生かしたビストロ料理を気軽な価格で。日常の夜にも、少し特別な日にもどうぞ。</p>
           </article>
-        </div>
-        <div className="menu-note">
-          <div className="plan-title"><small>RECOMMENDED</small><strong>PARTY PLAN</strong><span>いちばん人気のプラン</span></div>
-          <p className="plan-price"><span>飲み放題付きプラン</span><b><em>5,500</em>円<small>（税込）〜</small></b></p>
-          <div className="plan-details"><p>ご予算に応じたコース・貸切も承ります。<br />まずはお気軽にお電話でご相談ください。</p><a href={`tel:${phone.replaceAll("-", "")}`}><span>電話で相談する</span>{phone}</a></div>
         </div>
       </section>
 

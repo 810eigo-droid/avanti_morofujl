@@ -95,7 +95,7 @@ blockquote { position:absolute; z-index:3; left:7%; bottom:-38px; width:430px; b
 .number { position:absolute; z-index:3; top:-17px; left:17px; font:italic 38px Georgia,serif; color:var(--gold); }
 .feature-list h3 { font-size:22px; font-weight:400; margin:24px 0 12px; }
 .feature-list p { color:#bfb5a9; font-size:13px; line-height:1.9; margin:0; }
-.menu-note { position:relative; margin-top:82px; overflow:hidden; display:grid; grid-template-columns:.8fr 1fr 1.25fr; align-items:stretch; border:1px solid #d5af625f; background:linear-gradient(120deg,#121b25 0%,#182330 56%,#251a1a 100%); box-shadow:0 24px 60px #09070655,inset 0 0 0 4px #ffffff08; }
+.menu-note { position:relative; margin:82px 8vw 0; overflow:hidden; display:grid; grid-template-columns:.8fr 1fr 1.25fr; align-items:stretch; border:1px solid #d5af625f; background:linear-gradient(120deg,#121b25 0%,#182330 56%,#251a1a 100%); box-shadow:0 24px 60px #09070655,inset 0 0 0 4px #ffffff08; }
 .menu-note:before { content:""; position:absolute; left:0; top:0; width:88px; height:4px; background:var(--sun); }
 .menu-note>div,.plan-price { min-width:0; margin:0; padding:34px 38px; }
 .plan-title { display:flex; justify-content:center; flex-direction:column; border-right:1px solid #d5af6235; }
@@ -204,7 +204,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .section-heading { display:block; }
   .section-heading>p { margin-top:25px; }
   .feature-list { grid-template-columns:1fr; gap:55px; }
-  .menu-note { grid-template-columns:1fr; margin-top:62px; }
+  .menu-note { grid-template-columns:1fr; margin:62px 24px 0; }
   .menu-note>div,.plan-price { padding:25px 24px; }
   .plan-title,.plan-price { border-right:0; border-bottom:1px solid #d5af6235; }
   .plan-title strong { font-size:24px; }
