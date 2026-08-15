@@ -35,7 +35,7 @@ nav a:hover:after { width:100%; }
 h1 { font-size:clamp(38px,5.2vw,76px); font-weight:400; line-height:1.38; letter-spacing:.04em; margin:22px 0; }
 h1 span { display:inline-block; color:#e8c978; background:linear-gradient(180deg,#fff1b8 0%,#e9c46a 38%,#b9852e 62%,#f1d584 100%); background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-family:"Yu Mincho","Hiragino Mincho ProN",serif; font-style:normal; font-weight:600; letter-spacing:.035em; filter:drop-shadow(0 2px 1px #160b0788) drop-shadow(0 0 10px #d7a94126); }
 .hero-line { display:block; }
-.hero-line:first-child { color:white; font-style:normal; }
+.hero-line:first-child { color:white; background:none; -webkit-text-fill-color:#fff; font-style:italic; font-weight:400; letter-spacing:.04em; filter:drop-shadow(0 2px 2px #160b0780); }
 .hero-line-accent { color:#e8c978; }
 .hero-copy { font-size:16px; line-height:2; letter-spacing:.08em; }
 .hero-actions { display:flex; gap:14px; margin-top:40px; }
@@ -164,7 +164,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .eyebrow:before { content:""; width:25px; height:1px; background:var(--gold); }
   h1 { font-size:clamp(29px,8vw,36px); line-height:1.55; letter-spacing:.015em; margin:15px 0 17px; }
   .hero-line { white-space:nowrap; }
-  .hero-line:first-child { color:#fff; }
+  .hero-line:first-child { color:#fff; font-style:italic; letter-spacing:.015em; filter:drop-shadow(0 1px 1px #160b0790); }
   .hero-line-accent { color:#e8c978; font-size:1.04em; letter-spacing:.015em; filter:drop-shadow(0 1px 1px #160b0799) drop-shadow(0 0 7px #d7a94122); }
   .hero-copy { max-width:360px; border-left:1px solid var(--gold); padding-left:14px; font-size:12px; line-height:1.9; letter-spacing:.045em; }
   .pc { display:none; }
