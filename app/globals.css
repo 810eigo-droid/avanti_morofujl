@@ -54,7 +54,7 @@ h1 span { display:inline-block; color:#e8c978; background:linear-gradient(180deg
 .menu-gallery-heading { display:flex; align-items:end; justify-content:space-between; gap:40px; padding:0 8vw 42px; }
 .menu-gallery-heading h2 { margin-top:15px; font-size:clamp(30px,3.2vw,48px); }
 .menu-gallery-heading>p { max-width:410px; margin:0; color:#c7bdb2; font-size:13px; line-height:1.9; }
-.menu-gallery-window { overflow-x:auto; overflow-y:hidden; scroll-behavior:smooth; scroll-padding-inline:8vw; scroll-snap-type:x mandatory; scrollbar-width:none; touch-action:pan-x; -webkit-overflow-scrolling:touch; -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
+.menu-gallery-window { overflow-x:auto; overflow-y:hidden; scroll-behavior:smooth; scroll-padding-inline:8vw; scroll-snap-type:x mandatory; scrollbar-width:none; touch-action:pan-x pan-y pinch-zoom; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent); }
 .menu-gallery-window::-webkit-scrollbar { display:none; }
 .menu-gallery-window.is-auto-moving { scroll-behavior:auto; scroll-snap-type:none; }
 .menu-gallery-track { display:flex; width:max-content; }
@@ -233,7 +233,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .menu-gallery-heading h2 { margin-top:12px; font-size:30px; }
   .menu-gallery-heading>p { margin-top:18px; font-size:12px; }
   .menu-gallery-window { -webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
-  .menu-gallery-window { scroll-padding-inline:16vw; }
+  .menu-gallery-window { scroll-padding-inline:16vw; scroll-snap-type:x proximity; }
   .menu-gallery-card { width:68vw; max-width:280px; }
   .menu-gallery-set { padding-right:16vw; padding-left:16vw; }
   .menu-gallery-copy { min-height:168px; padding:14px 16px 15px; }
