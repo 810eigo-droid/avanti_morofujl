@@ -33,10 +33,10 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="アバンティ モロフジ トップへ">
-          <span>WINE SHOKUDO</span>
+          <span>WINE SHOKUDO <em>アバンティ モロフジ</em></span>
           AVANTI MOROFUJI
         </a>
-        <nav aria-label="メインメニュー">
+        <nav id="site-nav" aria-label="メインメニュー">
           <a href="#story">お店について</a>
           <a href="#menu">料理とワイン</a>
           <a href="#access">店舗情報</a>
@@ -45,6 +45,9 @@ export default function Home() {
           <small>ご予約・お問い合わせ</small>
           {phone}
         </a>
+        <button className="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
+          <span /><span /><span />
+        </button>
       </header>
 
       <section className="hero" id="top">

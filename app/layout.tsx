@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){function check(el){var note=document.createElement('small');note.className='image-disclaimer';note.textContent='※画像はイメージです';el.appendChild(note);var urls=Array.from(getComputedStyle(el).backgroundImage.matchAll(/url\\(["']?(.*?)["']?\\)/g),function(m){return m[1]});urls.forEach(function(src){var img=new Image();img.onload=function(){el.classList.add('image-loaded')};img.src=src})}document.querySelectorAll('.hero-photo,.image-slot').forEach(check)})();`,
+            __html: `(function(){function check(el){var note=document.createElement('small');note.className='image-disclaimer';note.textContent='※画像はイメージです';el.appendChild(note);var urls=Array.from(getComputedStyle(el).backgroundImage.matchAll(/url\\(["']?(.*?)["']?\\)/g),function(m){return m[1]});urls.forEach(function(src){var img=new Image();img.onload=function(){el.classList.add('image-loaded')};img.src=src})}document.querySelectorAll('.hero-photo,.image-slot').forEach(check)})();(function(){var header=document.querySelector('.site-header');var button=document.querySelector('.menu-toggle');if(!header||!button)return;function close(){header.classList.remove('menu-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','メニューを開く')}button.addEventListener('click',function(){var open=header.classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く')});header.querySelectorAll('nav a').forEach(function(link){link.addEventListener('click',close)})})();`,
           }}
         />
       </body>
