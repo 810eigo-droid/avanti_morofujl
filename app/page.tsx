@@ -84,7 +84,7 @@ export default function Home() {
             <span className="hero-line hero-line-accent">本格的なひと皿を。</span>
           </h1>
           <p className="hero-copy">
-            イタリアで修業した店主がつくる南欧料理と、自然派・オレンジワイン。
+            <span className="hero-copy-burst">イタリアで修業した店主がつくる南欧料理と、自然派・オレンジワイン。</span>
             <br className="pc" />17席の小さな隠れ家で、気取らないおいしい時間を。
           </p>
           <div className="hero-actions">
