@@ -407,7 +407,7 @@ main:before { content:""; position:fixed; z-index:90; inset:0; pointer-events:no
 }
 
 /* Keep the motion design, but remove the scattered dot/particle layers. */
-main:before,.menu-gallery:before,.menu-gallery:after,.features:before,.features:after { display:none !important; content:none !important; }
+main:before,.hero-photo:after,.menu-gallery:before,.menu-gallery:after,.features:before,.features:after { display:none !important; content:none !important; animation:none !important; }
 
 /* Short, section-triggered headline motions. */
 .text-motion { will-change:transform,opacity; }
