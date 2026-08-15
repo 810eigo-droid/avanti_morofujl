@@ -227,6 +227,7 @@ export default function Home() {
           <iframe title="ワイン食堂 アバンティ モロフジ周辺のGoogleマップ" src="https://www.google.com/maps?q=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
           <a className="map-open" href="https://www.google.com/maps/search/?api=1&query=%E7%A6%8F%E5%B2%A1%E7%9C%8C%E4%B9%85%E7%95%99%E7%B1%B3%E5%B8%82%E6%9D%B1%E7%94%BA397-6" target="_blank" rel="noreferrer"><span>Google Maps</span><strong>大きな地図で開く ↗</strong></a>
           </div>
+          <p className="map-address"><span>ADDRESS</span>〒830-0032 福岡県久留米市東町397-6 1F</p>
         </div>
       </section>
 
