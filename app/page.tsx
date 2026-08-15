@@ -234,8 +234,7 @@ export default function Home() {
         <img className="reservation-sp-image" src="/images/footer-bg-sp.webp" alt="" aria-hidden="true" />
         <p>お席に限りがあるため、ご予約がおすすめです。</p>
         <h2>今夜のテーブルを、<br />ご用意してお待ちしています。</h2>
-        <a href={`tel:${phone.replaceAll("-", "")}`}><small>電話で予約する</small>{phone}</a>
-        <span>受付は営業時間内／ネット予約は食べログから</span>
+        <a href={`tel:${phone.replaceAll("-", "")}`} aria-label={`電話で予約する ${phone}`}><small>電話で予約する</small>{phone}</a>
       </section>
 
       <footer>
