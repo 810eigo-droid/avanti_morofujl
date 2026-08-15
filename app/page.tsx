@@ -215,6 +215,7 @@ export default function Home() {
         <a href={`tel:${phone.replaceAll("-", "")}`}>電話で予約</a>
         <a href={externalLinks.tabelog} target="_blank" rel="noreferrer">ネット予約</a>
       </div>
+      <a className="back-to-top" href="#top" aria-label="ページの先頭へ戻る">↑</a>
     </main>
   );
 }

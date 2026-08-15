@@ -150,10 +150,10 @@ dd small { color:#776d62; }
 footer { min-height:170px; background:#181614; color:#f4eee5; display:flex; align-items:center; justify-content:space-between; padding:0 8vw; }
 footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
 .footer-logo { display:block; width:auto; height:82px; object-fit:contain; }
-.mobile-cta { display:none; }
+.mobile-cta,.back-to-top { display:none; }
 
 @media (max-width:800px) {
-  .site-header { height:74px; padding:0 20px; }
+  .site-header { position:relative; top:auto; height:74px; padding:0 20px; }
   .brand { position:relative; z-index:2; font-size:14px; }
   .header-logo { height:48px; }
   .brand span { letter-spacing:.24em; }
@@ -234,4 +234,5 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .mobile-cta { display:grid; grid-template-columns:1fr 1fr; position:fixed; z-index:30; bottom:0; left:0; right:0; box-shadow:0 -4px 18px #0004; }
   .mobile-cta a { min-height:36px; display:grid; place-items:center; text-align:center; padding:7px 4px; background:#f3eee5; color:var(--wine); font:bold 11px/1 sans-serif; letter-spacing:.03em; }
   .mobile-cta a:last-child { color:white; background:var(--wine); }
+  .back-to-top { position:fixed; z-index:31; right:12px; bottom:46px; width:36px; height:36px; display:grid; place-items:center; border:1px solid #d6b15f; border-radius:50%; background:#12392feF; color:white; box-shadow:0 5px 16px #0005; font:bold 18px/1 Arial,sans-serif; }
 }
