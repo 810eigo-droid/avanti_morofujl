@@ -19,6 +19,9 @@ const menuSlides = [
   { number: "08", category: "QUICHE", title: "カボチャとサツマイモのキッシュ", description: "カボチャとサツマイモのやさしい甘み。" },
   { number: "09", category: "PASTA", title: "甘エビとヤリイカのレモンクリームソーススパゲティ", description: "甘エビとヤリイカに、爽やかなレモンクリーム。" },
   { number: "10", category: "GRATIN", title: "ベルギー風 牛肉と野菜のビール煮込みグラタン", description: "牛肉と野菜をビールで煮込んだベルギー風グラタン。" },
+  { number: "11", category: "ANTIPASTO", title: "オイルサーディン", description: "旨み豊かなオイルサーディンを、ワインのお供に。" },
+  { number: "12", category: "GNOCCHI", title: "サツマイモのニョッキ 4種のチーズソース", description: "サツマイモの甘みと、4種のチーズの濃厚なソース。" },
+  { number: "13", category: "PASTA", title: "カーチョ・エ・ペペ", description: "チーズと黒胡椒で仕上げる、ローマ伝統のパスタ。" },
 ].map((slide) => ({ ...slide, src: `/images/menu-slide-${slide.number}.webp`, name: `menu-slide-${slide.number}.webp` }));
 
 function ImageSlot({
