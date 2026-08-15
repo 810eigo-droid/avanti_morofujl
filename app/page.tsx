@@ -38,8 +38,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="アバンティ モロフジ トップへ">
-          <span>WINE SHOKUDO <em>アバンティ モロフジ</em></span>
-          AVANTI MOROFUJI
+          <img className="header-logo" src="/images/logo-main.webp" alt="AVANTI モロフジ" />
         </a>
         <nav id="site-nav" aria-label="メインメニュー">
           <a href="#story">お店について</a>
@@ -208,7 +207,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="brand"><span>WINE SHOKUDO</span>AVANTI MOROFUJI</div>
+        <img className="footer-logo" src="/images/logo-main.webp" alt="AVANTI モロフジ" />
         <p>© AVANTI MOROFUJI</p>
       </footer>
 
