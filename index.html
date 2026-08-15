@@ -76,6 +76,10 @@
 <script>
 (function(){
   function check(el){
+    var note=document.createElement('small');
+    note.className='image-disclaimer';
+    note.textContent='※画像はイメージです';
+    el.appendChild(note);
     var bg=getComputedStyle(el).backgroundImage;
     var urls=Array.from(bg.matchAll(/url\(["']?(.*?)["']?\)/g),function(match){return match[1];});
     urls.forEach(function(src){
