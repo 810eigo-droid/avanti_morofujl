@@ -145,7 +145,7 @@ export default function Home() {
         <div className="section-kicker">OUR TABLE</div>
         <div className="intro-grid">
           <div>
-            <h2>久留米の路地裏に、<br />小さな南欧の食卓を。</h2>
+            <h2><span className="intro-title-line">久留米の路地裏に、</span><span className="intro-title-line">小さな南欧の食卓を。</span></h2>
           </div>
           <div className="intro-copy">
             <p>西鉄久留米駅から歩いて4分。路地の先にあるアバンティ モロフジは、ワインと南欧料理を肩肘張らずに楽しめる小さな食堂です。</p>
