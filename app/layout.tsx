@@ -21,7 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){function check(el){var bg=getComputedStyle(el).backgroundImage;var m=bg.match(/url\\(["']?(.*?)["']?\\)/);if(!m)return;var img=new Image();img.onload=function(){el.classList.add('image-loaded')};img.src=m[1]}document.querySelectorAll('.hero-photo,.image-slot').forEach(check)})();`,
+            __html: `(function(){function check(el){var urls=Array.from(getComputedStyle(el).backgroundImage.matchAll(/url\\(["']?(.*?)["']?\\)/g),function(m){return m[1]});urls.forEach(function(src){var img=new Image();img.onload=function(){el.classList.add('image-loaded')};img.src=src})}document.querySelectorAll('.hero-photo,.image-slot').forEach(check)})();`,
           }}
         />
       </body>

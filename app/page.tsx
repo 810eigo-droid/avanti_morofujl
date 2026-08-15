@@ -48,7 +48,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-photo" style={{ backgroundImage: "url(/images/hero-main.webp)" }} role="img" aria-label="店内や料理のメイン写真を入れる場所">
+        <div className="hero-photo" style={{ "--hero-desktop": "url(/images/hero-main.webp)", "--hero-mobile": "url(/images/hero-mobile.webp)" } as React.CSSProperties} role="img" aria-label="店内や料理のメイン写真を入れる場所">
           <div className="hero-placeholder">
             <span>MAIN PHOTO</span>
             <strong>hero-main.webp</strong>
@@ -59,8 +59,8 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow">4 min. from Nishitetsu Kurume</p>
           <h1>
-            “食堂”の気軽さで、
-            <br /><span>本格的なひと皿を。</span>
+            <span className="hero-line">“食堂”の気軽さで、</span>
+            <span className="hero-line hero-line-accent">本格的なひと皿を。</span>
           </h1>
           <p className="hero-copy">
             イタリアで修業した店主がつくる南欧料理と、自然派・オレンジワイン。

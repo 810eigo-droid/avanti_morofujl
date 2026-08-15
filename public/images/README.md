@@ -5,6 +5,7 @@
 | ファイル名 | 推奨サイズ | 内容 |
 |---|---:|---|
 | hero-main.webp | 1920 × 1280px | 店内の雰囲気と料理が伝わるメイン写真（人物入りも可） |
+| hero-mobile.webp | 1080 × 1600px | スマホFV専用の縦長写真。未配置時はhero-main.webpを自動使用 |
 | food-signature.webp | 1200 × 900px | 一番おすすめしたい看板料理 |
 | chef-cooking.webp | 900 × 1200px | 店主の調理風景、または店主のポートレート |
 | food-tapas.webp | 1000 × 750px | 前菜・タパスの盛り合わせ |

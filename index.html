@@ -17,13 +17,13 @@
   </header>
 
   <section class="hero" id="top">
-    <div class="hero-photo" style="background-image:url(public/images/hero-main.webp)">
+    <div class="hero-photo" style="--hero-desktop:url(public/images/hero-main.webp);--hero-mobile:url(public/images/hero-mobile.webp)">
       <div class="hero-placeholder"><span>MAIN PHOTO</span><strong>hero-main.webp</strong><small>推奨 1920 × 1280px</small></div>
     </div>
     <div class="hero-shade"></div>
     <div class="hero-content">
       <p class="eyebrow">4 min. from Nishitetsu Kurume</p>
-      <h1>“食堂”の気軽さで、<br><span>本格的なひと皿を。</span></h1>
+      <h1><span class="hero-line">“食堂”の気軽さで、</span><span class="hero-line hero-line-accent">本格的なひと皿を。</span></h1>
       <p class="hero-copy">イタリアで修業した店主がつくる南欧料理と、自然派・オレンジワイン。<br class="pc">17席の小さな隠れ家で、気取らないおいしい時間を。</p>
       <div class="hero-actions">
         <a class="button button-primary" href="tel:0942313360">電話で席を予約する</a>
@@ -77,11 +77,12 @@
 (function(){
   function check(el){
     var bg=getComputedStyle(el).backgroundImage;
-    var match=bg.match(/url\(["']?(.*?)["']?\)/);
-    if(!match)return;
-    var image=new Image();
-    image.onload=function(){el.classList.add('image-loaded');};
-    image.src=match[1];
+    var urls=Array.from(bg.matchAll(/url\(["']?(.*?)["']?\)/g),function(match){return match[1];});
+    urls.forEach(function(src){
+      var image=new Image();
+      image.onload=function(){el.classList.add('image-loaded');};
+      image.src=src;
+    });
   }
   document.querySelectorAll('.hero-photo,.image-slot').forEach(check);
 })();
