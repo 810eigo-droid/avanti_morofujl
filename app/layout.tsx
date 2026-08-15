@@ -31,6 +31,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 (function(){var header=document.querySelector('.site-header');var button=document.querySelector('.menu-toggle');if(!header||!button)return;function close(){header.classList.remove('menu-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','メニューを開く')}button.addEventListener('click',function(){var open=header.classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く')});header.querySelectorAll('nav a').forEach(function(link){link.addEventListener('click',close)})})();`,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;document.documentElement.classList.add('motion-ready');var selectors=['.menu-gallery-heading','.intro-grid','.photo-collage','.section-heading','.feature-list article','.party-plan-feature','.occasion-photo','.occasion-card','.access-info','.shop-exterior-wrap','.map','.reservation>p','.reservation>h2','.reservation>a','.social-badge'];var items=[];selectors.forEach(function(selector){document.querySelectorAll(selector).forEach(function(el){el.classList.add('motion-reveal');if(selector==='.occasion-photo'||selector==='.shop-exterior-wrap')el.classList.add('from-left');if(selector==='.occasion-card'||selector==='.map')el.classList.add('from-right');items.push(el)})});var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -7% 0px'});items.forEach(function(el){observer.observe(el)})})();",
+          }}
+        />
       </body>
     </html>
   );
