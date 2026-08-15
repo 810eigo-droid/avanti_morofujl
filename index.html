@@ -177,7 +177,7 @@
 })();
 </script>
 <script>
-(function(){var v=document.querySelector('.menu-gallery-window');if(!v||innerWidth>800)return;var start=v.scrollLeft;setTimeout(function(){var sample=v.scrollLeft;setTimeout(function(){if(Math.abs(v.scrollLeft-sample)>2)return;var last=0,pauseUntil=0,cycle=v.scrollWidth/2;function pause(){pauseUntil=performance.now()+4500;last=0}function move(t){if(t>=pauseUntil&&!document.hidden){if(last)v.scrollLeft+=(t-last)*.016;if(v.scrollLeft>=cycle)v.scrollLeft-=cycle;last=t}else last=0;requestAnimationFrame(move)}v.addEventListener('pointerdown',pause,{passive:true});v.addEventListener('touchstart',pause,{passive:true});requestAnimationFrame(move)},1200)},600)})();
+(function(){var v=document.querySelector('.menu-gallery-window');if(!v||innerWidth>800)return;setTimeout(function(){var sample=v.scrollLeft;setTimeout(function(){if(Math.abs(v.scrollLeft-sample)>2)return;v.classList.add('is-auto-moving');var last=0,pauseUntil=0,cycle=v.scrollWidth/2;function pause(){pauseUntil=performance.now()+4500;last=0}function move(t){if(t>=pauseUntil&&!document.hidden){if(last)v.scrollLeft+=(t-last)*.018;if(v.scrollLeft>=cycle)v.scrollLeft-=cycle;last=t}else last=0;requestAnimationFrame(move)}v.addEventListener('pointerdown',pause,{passive:true});v.addEventListener('touchstart',pause,{passive:true});requestAnimationFrame(move)},1200)},600)})();
 </script>
 </body>
 </html>
