@@ -199,14 +199,14 @@ export default function Home() {
         </a>
       </section>
 
-      <section className="reservation">
+      <section className="reservation" style={{ "--reservation-bg": "url(/images/footer-bg.webp)" } as React.CSSProperties}>
         <p>お席に限りがあるため、ご予約がおすすめです。</p>
         <h2>今夜のテーブルを、<br />ご用意してお待ちしています。</h2>
         <a href={`tel:${phone.replaceAll("-", "")}`}><small>電話で予約する</small>{phone}</a>
         <span>受付は営業時間内／ネット予約は食べログから</span>
       </section>
 
-      <footer style={{ "--footer-bg": "url(/images/footer-bg.webp)" } as React.CSSProperties}>
+      <footer>
         <div className="brand"><span>WINE SHOKUDO</span>AVANTI MOROFUJI</div>
         <p>© AVANTI MOROFUJI</p>
       </footer>
