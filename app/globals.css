@@ -96,22 +96,23 @@ blockquote { position:absolute; z-index:3; left:7%; bottom:-38px; width:430px; b
 .number { position:absolute; z-index:3; top:-17px; left:17px; font:italic 38px Georgia,serif; color:var(--gold); }
 .feature-list h3 { font-size:22px; font-weight:400; margin:24px 0 12px; }
 .feature-list p { color:#bfb5a9; font-size:13px; line-height:1.9; margin:0; }
-.menu-note { position:relative; margin:82px 8vw 0; overflow:hidden; display:grid; grid-template-columns:.8fr 1fr 1.25fr; align-items:stretch; border:1px solid #d5af625f; background:linear-gradient(120deg,#121b25 0%,#182330 56%,#251a1a 100%); box-shadow:0 24px 60px #09070655,inset 0 0 0 4px #ffffff08; }
-.menu-note:before { content:""; position:absolute; left:0; top:0; width:88px; height:4px; background:var(--sun); }
+.menu-note { position:relative; margin:82px 8vw 0; overflow:hidden; display:grid; grid-template-columns:.8fr 1fr 1.25fr; align-items:stretch; border:2px solid #c8a66a; background:radial-gradient(circle at 46% 50%,#d7ac4a24 0%,transparent 30%),linear-gradient(120deg,#121b25 0%,#182330 56%,#251a1a 100%); box-shadow:0 0 0 5px #c8a66a1c,0 26px 70px #09070670,inset 0 0 0 1px #ffffff17; }
+.menu-note:before { content:""; position:absolute; z-index:2; left:0; top:0; width:100%; height:4px; background:linear-gradient(90deg,var(--sun),#f4d88d,var(--sun)); }
 .menu-note>div,.plan-price { min-width:0; margin:0; padding:34px 38px; }
 .plan-title { display:flex; justify-content:center; flex-direction:column; border-right:1px solid #d5af6235; }
-.plan-title small { color:var(--sun); font:8px Arial,sans-serif; letter-spacing:.26em; }
+.plan-title small { align-self:flex-start; padding:5px 9px 4px; color:#121b25; background:var(--sun); box-shadow:0 5px 18px #0005; font:800 8px Arial,sans-serif; letter-spacing:.18em; }
 .plan-title strong { display:block; margin:7px 0 9px; color:#f5e5b8; font:26px Georgia,serif; letter-spacing:.12em; }
 .plan-title span { color:#b9b1a5; font-size:10px; letter-spacing:.12em; }
 .plan-price { display:flex; justify-content:center; flex-direction:column; border-right:1px solid #d5af6235; }
 .plan-price>span { color:#e8ded0; font-size:13px; letter-spacing:.08em; }
 .plan-price b { display:block; margin-top:7px; color:#f7e4ad; font-size:18px; font-weight:400; white-space:nowrap; }
-.plan-price b em { margin-right:4px; color:#fff3c7; font:italic 42px Georgia,serif; }
+.plan-price b em { margin-right:4px; color:#fff3c7; text-shadow:0 0 24px #d7ac4a80; font:italic 42px Georgia,serif; }
 .plan-price b small { margin-left:3px; color:#c9bda9; font:9px sans-serif; }
 .plan-details { display:flex; justify-content:center; flex-direction:column; }
 .plan-details p { margin:0 0 15px; color:#c7bdb2; font-size:12px; line-height:1.9; }
-.plan-details a { align-self:flex-start; display:flex; align-items:center; gap:16px; border-bottom:1px solid #d5af6280; padding:0 0 7px; color:#f7e4ad; font:18px Georgia,serif; }
-.plan-details a span { color:white; font:9px Arial,sans-serif; letter-spacing:.15em; }
+.plan-details a { align-self:flex-start; display:flex; align-items:center; gap:16px; border:1px solid #d5af62; padding:10px 14px; color:#f7e4ad; background:#d5af6214; box-shadow:inset 0 0 0 1px #ffffff0a; font:18px Georgia,serif; white-space:nowrap; transition:background .25s,color .25s,transform .25s; }
+.plan-details a:hover { color:#121b25; background:#d5af62; transform:translateY(-2px); }
+.plan-details a span { color:inherit; font:700 9px Arial,sans-serif; letter-spacing:.15em; }
 .occasion { padding-top:0; padding-bottom:0; display:grid; grid-template-columns:1.25fr .75fr; background:var(--cream); }
 .occasion-photo { min-height:680px; margin-left:-8vw; }
 .occasion-card { padding:100px 0 80px 7vw; }
@@ -216,6 +217,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .plan-title strong { font-size:24px; }
   .plan-price b em { font-size:38px; }
   .plan-details p { margin-bottom:13px; }
+  .plan-details a { align-self:stretch; justify-content:center; }
   .occasion { display:flex; flex-direction:column; padding:0; }
   .occasion-photo { margin:0; min-height:460px; }
   .occasion-card { padding:70px 24px; }
