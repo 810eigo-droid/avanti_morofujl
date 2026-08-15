@@ -123,15 +123,19 @@
   }
   var viewport=document.querySelector('.menu-gallery-window');
   if(viewport){
+    var set=viewport.querySelector('.menu-gallery-set');
     var cards=Array.from(viewport.querySelectorAll('.menu-gallery-card'));
     var dots=Array.from(document.querySelectorAll('.menu-gallery-dots button'));
-    var active=0,raf=0,last=0,pauseUntil=0,direction=1;
+    cards.forEach(function(card){var clone=card.cloneNode(true);clone.setAttribute('aria-hidden','true');set.appendChild(clone);});
+    var cycle=cards[cards.length-1].nextElementSibling.offsetLeft-cards[0].offsetLeft;
+    var origin=cards[0].offsetLeft;
+    var active=0,raf=0,last=0,pauseUntil=0;
     var reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
     function mark(index){active=index;dots.forEach(function(dot,i){var on=i===index;dot.classList.toggle('is-active',on);if(on)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});}
     function pause(){pauseUntil=performance.now()+4500;viewport.classList.remove('is-auto-moving');last=0;}
     function go(index){pause();var inset=innerWidth<=800?innerWidth*.16:innerWidth*.08;viewport.scrollTo({left:Math.max(0,cards[index].offsetLeft-inset),behavior:'smooth'});mark(index);}
-    function update(){raf=0;var target=viewport.scrollLeft+(innerWidth<=800?innerWidth*.16:innerWidth*.08);var nearest=0,distance=Infinity;cards.forEach(function(card,i){var value=Math.abs(card.offsetLeft-target);if(value<distance){distance=value;nearest=i;}});mark(nearest);}
-    function animate(time){if(!reduced&&time>=pauseUntil&&!document.hidden){viewport.classList.add('is-auto-moving');if(last){viewport.scrollLeft+=direction*(time-last)*.012;var end=viewport.scrollWidth-viewport.clientWidth;if(viewport.scrollLeft>=end-1)direction=-1;else if(viewport.scrollLeft<=1)direction=1;}last=time;}else{last=0;}requestAnimationFrame(animate);}
+    function update(){raf=0;var inset=innerWidth<=800?innerWidth*.16:innerWidth*.08;var target=((viewport.scrollLeft+inset-origin)%cycle+cycle)%cycle+origin;var nearest=0,distance=Infinity;cards.forEach(function(card,i){var value=Math.abs(card.offsetLeft-target);if(value<distance){distance=value;nearest=i;}});mark(nearest);}
+    function animate(time){if(!reduced&&time>=pauseUntil&&!document.hidden){viewport.classList.add('is-auto-moving');if(last){viewport.scrollLeft+=(time-last)*.012;if(viewport.scrollLeft>=cycle)viewport.scrollLeft-=cycle;}last=time;}else{last=0;}requestAnimationFrame(animate);}
     dots.forEach(function(dot,i){dot.addEventListener('click',function(){go(i);});});
     viewport.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(update);},{passive:true});
     viewport.addEventListener('pointerdown',pause,{passive:true});
