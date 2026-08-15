@@ -218,9 +218,9 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .map { min-height:390px; }
   .reservation { padding:80px 20px 105px; }
   .reservation>a { min-width:0; width:100%; }
-  footer { min-height:140px; padding:0 24px 70px; }
+  footer { min-height:110px; padding:0 24px 40px; }
   footer p { display:none; }
   .mobile-cta { display:grid; grid-template-columns:1fr 1fr; position:fixed; z-index:30; bottom:0; left:0; right:0; box-shadow:0 -4px 18px #0004; }
-  .mobile-cta a { text-align:center; padding:17px 8px; background:#f3eee5; color:var(--wine); font:bold 13px sans-serif; }
+  .mobile-cta a { min-height:36px; display:grid; place-items:center; text-align:center; padding:7px 4px; background:#f3eee5; color:var(--wine); font:bold 11px/1 sans-serif; letter-spacing:.03em; }
   .mobile-cta a:last-child { color:white; background:var(--wine); }
 }
