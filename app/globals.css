@@ -106,6 +106,7 @@ blockquote { position:absolute; z-index:3; left:7%; bottom:-38px; width:430px; b
 .party-plan-feature:before { content:""; position:absolute; z-index:2; inset:8px; border:1px solid #d5af6238; pointer-events:none; }
 .party-plan-visual { position:relative; min-width:0; padding:18px; }
 .party-plan-photo { min-height:0; aspect-ratio:1; background-position:center; }
+.party-plan-photo-sub { margin-top:18px; }
 .party-plan-ribbon { position:absolute; z-index:4; top:34px; left:0; padding:10px 24px 9px; color:#14202b; background:var(--sun); box-shadow:5px 6px 0 #0d151dcc; font:800 9px Arial,sans-serif; letter-spacing:.22em; }
 .party-plan-content { position:relative; z-index:3; padding:46px 54px 40px; border-left:1px solid #d5af6238; }
 .party-plan-heading>span { color:var(--sun); font:800 9px Arial,sans-serif; letter-spacing:.27em; }
@@ -251,7 +252,8 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
   .section-heading>p { margin-top:25px; }
   .feature-list { grid-template-columns:1fr; gap:55px; }
   .party-plan-feature { grid-template-columns:1fr; margin:62px 18px 0; }
-  .party-plan-visual { padding:12px; }
+  .party-plan-visual { display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:12px; }
+  .party-plan-photo-sub { margin-top:0; }
   .party-plan-content { padding:30px 22px 25px; border-top:1px solid #d5af6238; border-left:0; }
   .party-plan-heading h2 { font-size:34px; }
   .party-plan-heading p { font-size:12px; line-height:1.6; }

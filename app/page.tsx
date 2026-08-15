@@ -126,6 +126,7 @@ export default function Home() {
         <section className="party-plan-feature" aria-labelledby="party-plan-title">
           <div className="party-plan-visual">
             <ImageSlot src="/images/5500.webp" name="5500.webp" size="正方形推奨 1200 × 1200px" className="party-plan-photo" />
+            <ImageSlot src="/images/5500-sub.webp" name="5500-sub.webp" size="正方形推奨 1200 × 1200px" className="party-plan-photo party-plan-photo-sub" />
             <span className="party-plan-ribbon">MOST POPULAR</span>
           </div>
           <div className="party-plan-content">
