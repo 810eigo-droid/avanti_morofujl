@@ -59,8 +59,8 @@ export default function Home() {
         <div className="hero-content">
           <p className="eyebrow">4 min. from Nishitetsu Kurume</p>
           <h1>
-            ワインと料理で、
-            <br />久留米の夜を<span>ちょっと特別に。</span>
+            “食堂”の気軽さで、
+            <br /><span>本格的なひと皿を。</span>
           </h1>
           <p className="hero-copy">
             イタリアで修業した店主がつくる南欧料理と、自然派・オレンジワイン。
