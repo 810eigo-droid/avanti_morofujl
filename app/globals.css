@@ -48,8 +48,8 @@ h1 span { display:inline-block; color:#e8c978; background:linear-gradient(180deg
 .hero-facts { position:absolute; z-index:4; right:4vw; bottom:20px; display:flex; gap:6px; color:#241914; }
 .hero-facts div { position:relative; width:190px; min-height:92px; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; border:1px solid #8c682c; padding:12px 16px; background:linear-gradient(145deg,rgba(249,221,145,.97),rgba(205,160,73,.96)); box-shadow:inset 0 0 0 3px #f9e3a566,0 10px 24px #160d0b32; text-align:center; backdrop-filter:blur(8px); }
 .hero-facts div:after { content:""; position:absolute; inset:6px; border:1px solid #72501e55; pointer-events:none; }
-.hero-facts strong { display:block; color:#664a28; font:9px Arial,sans-serif; letter-spacing:.15em; margin:0 0 5px; }
-.hero-facts span { font-size:18px; line-height:1.2; white-space:nowrap; }
+.hero-facts strong { display:block; color:#664a28; font:11px Arial,sans-serif; letter-spacing:.15em; margin:0 0 5px; }
+.hero-facts span { font-size:20px; line-height:1.2; white-space:nowrap; }
 .menu-gallery { overflow:hidden; padding:80px 0 90px; background:#211a18; color:#f6f0e7; }
 .menu-gallery-heading { display:flex; align-items:end; justify-content:space-between; gap:40px; padding:0 8vw 42px; }
 .menu-gallery-heading h2 { margin-top:15px; font-size:clamp(30px,3.2vw,48px); }
