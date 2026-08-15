@@ -88,8 +88,8 @@ export default function Home() {
 
       <section className="menu-gallery" aria-labelledby="menu-gallery-title">
         <div className="menu-gallery-heading">
-          <div><span className="section-kicker">A TASTE OF AVANTI</span><h2 id="menu-gallery-title">今夜、出会えるひと皿。</h2></div>
-          <p>季節の食材とワインに寄り添う料理を、写真で少しずつご紹介します。</p>
+          <div><span className="section-kicker">A TASTE OF AVANTI</span><h2 id="menu-gallery-title">おいしい夜は、<br />話が尽きない。</h2></div>
+          <p>気になる料理を囲んで、グラスを重ねて。いつもの友人と、時間を忘れる夜を。</p>
         </div>
         <div className="menu-gallery-window">
           <div className="menu-gallery-track">
