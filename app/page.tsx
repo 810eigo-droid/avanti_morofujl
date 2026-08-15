@@ -8,10 +8,16 @@ const externalLinks = {
   gnavi: "https://r.gnavi.co.jp/9ku61t3z0000/",
 };
 
-const menuSlides = Array.from({ length: 8 }, (_, index) => {
-  const number = String(index + 1).padStart(2, "0");
-  return { src: `/images/menu-slide-${number}.webp`, name: `menu-slide-${number}.webp`, number };
-});
+const menuSlides = [
+  { number: "01", category: "RISOTTO", title: "ヤリイカとイカ墨ソースリゾット", description: "ヤリイカの旨みと、濃厚なイカ墨ソース。" },
+  { number: "02", category: "DOLCE", title: "ピスタチオのセミフレッド（アイスクリーム）とチョコレートマデルナッサ", description: "香ばしいピスタチオとチョコレートの余韻。" },
+  { number: "03", category: "PASTA", title: "サンマのスパゲティ", description: "旬のサンマを楽しむ、季節のスパゲティ。" },
+  { number: "04", category: "PASTA", title: "ピスタチオのクリームソーススパゲティ", description: "ピスタチオのコクを生かしたクリーム仕立て。" },
+  { number: "05", category: "CARNE", title: "大振りのラム肉", description: "食べ応えのある大振りのラム肉。" },
+  { number: "06", category: "CARNE & PASTA", title: "蝦夷鹿のイタリア仕込みのスーパートスカーナ、モンテアンティコ（赤ワイン）煮込み＆パスタ", description: "赤ワインでじっくり煮込んだ蝦夷鹿をパスタと。" },
+  { number: "07", category: "PASTA", title: "カリフラワーと羊のチーズのせ、ピスタチオソースのパスタ", description: "羊のチーズとピスタチオが香るひと皿。" },
+  { number: "08", category: "QUICHE", title: "カボチャとサツマイモのキッシュ", description: "カボチャとサツマイモのやさしい甘み。" },
+].map((slide) => ({ ...slide, src: `/images/menu-slide-${slide.number}.webp`, name: `menu-slide-${slide.number}.webp` }));
 
 function ImageSlot({
   src,
@@ -94,22 +100,22 @@ export default function Home() {
         </div>
         <div className="menu-gallery-window">
           <div className="menu-gallery-track">
-            {[0, 1].map((setIndex) => (
-              <div className="menu-gallery-set" key={setIndex} aria-hidden={setIndex === 1 ? "true" : undefined}>
-                {menuSlides.map((slide, index) => (
-                  <article className={`menu-gallery-card menu-gallery-card-${(index % 3) + 1}`} key={`${setIndex}-${slide.name}`}>
-                    <ImageSlot src={slide.src} name={slide.name} size="推奨 800 × 1000px" className="menu-gallery-photo" />
-                    <div className="menu-gallery-copy">
-                      <small>MENU {slide.number}</small>
-                      <h3>料理名が入ります</h3>
-                      <p>料理の特徴を短い文章でご紹介します。</p>
-                      <strong>¥0,000 <em>税込</em></strong>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            ))}
+            <div className="menu-gallery-set">
+              {menuSlides.map((slide, index) => (
+                <article className={`menu-gallery-card menu-gallery-card-${(index % 3) + 1}`} key={slide.name}>
+                  <ImageSlot src={slide.src} name={slide.name} size="推奨 800 × 1000px" className="menu-gallery-photo" />
+                  <div className="menu-gallery-copy">
+                    <small>MENU {slide.number} / {slide.category}</small>
+                    <h3>{slide.title}</h3>
+                    <p>{slide.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
+        </div>
+        <div className="menu-gallery-dots" aria-label="料理写真を選ぶ">
+          {menuSlides.map((slide, index) => <button className={index === 0 ? "is-active" : ""} type="button" data-slide={index} aria-label={`${slide.number} ${slide.title}`} aria-current={index === 0 ? "true" : undefined} key={slide.number} />)}
         </div>
         <div className="menu-note">
           <div className="plan-title"><small>RECOMMENDED</small><strong>PARTY PLAN</strong><span>いちばん人気のプラン</span></div>
