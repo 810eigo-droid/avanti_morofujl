@@ -166,7 +166,18 @@
     button.addEventListener('click',function(){var open=header.classList.toggle('menu-open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');});
     header.querySelectorAll('nav a').forEach(function(link){link.addEventListener('click',closeMenu);});
   }
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('motion-ready');
+    var selectors=['.menu-gallery-heading','.intro-grid','.photo-collage','.section-heading','.feature-list article','.party-plan-feature','.occasion-photo','.occasion-card','.access-info','.shop-exterior-wrap','.map','.reservation>p','.reservation>h2','.reservation>a','.social-badge'];
+    var revealItems=[];
+    selectors.forEach(function(selector){document.querySelectorAll(selector).forEach(function(el){el.classList.add('motion-reveal');if(selector==='.occasion-photo'||selector==='.shop-exterior-wrap')el.classList.add('from-left');if(selector==='.occasion-card'||selector==='.map')el.classList.add('from-right');revealItems.push(el);});});
+    var revealObserver=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+    revealItems.forEach(function(el){revealObserver.observe(el);});
+  }
 })();
+</script>
+<script>
+(function(){var v=document.querySelector('.menu-gallery-window');if(!v||innerWidth>800)return;var start=v.scrollLeft;setTimeout(function(){var sample=v.scrollLeft;setTimeout(function(){if(Math.abs(v.scrollLeft-sample)>2)return;var last=0,pauseUntil=0,cycle=v.scrollWidth/2;function pause(){pauseUntil=performance.now()+4500;last=0}function move(t){if(t>=pauseUntil&&!document.hidden){if(last)v.scrollLeft+=(t-last)*.016;if(v.scrollLeft>=cycle)v.scrollLeft-=cycle;last=t}else last=0;requestAnimationFrame(move)}v.addEventListener('pointerdown',pause,{passive:true});v.addEventListener('touchstart',pause,{passive:true});requestAnimationFrame(move)},1200)},600)})();
 </script>
 </body>
 </html>
