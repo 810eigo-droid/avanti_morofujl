@@ -95,6 +95,9 @@
 </main>
 <script>
 (function(){
+  if(matchMedia('(max-width:800px)').matches){
+    document.querySelectorAll('a[target="_blank"]').forEach(function(link){link.removeAttribute('target');});
+  }
   function check(el){
     if(!el.classList.contains('menu-gallery-photo')){
       var note=document.createElement('small');
