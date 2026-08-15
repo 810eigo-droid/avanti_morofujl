@@ -193,7 +193,8 @@ dd small { color:#776d62; }
 footer { min-height:170px; background:#181614; color:#f4eee5; display:flex; align-items:center; justify-content:space-between; padding:0 8vw; }
 footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
 .footer-logo { display:block; width:auto; height:82px; object-fit:contain; }
-.mobile-cta,.back-to-top { display:none; }
+.mobile-cta { display:none; }
+.back-to-top { position:fixed; z-index:31; right:24px; bottom:24px; width:46px; height:46px; display:grid; place-items:center; border:1px solid #d6b15f; border-radius:50%; background:#121b25ef; color:white; box-shadow:0 7px 22px #0005; font:bold 21px/1 Arial,sans-serif; backdrop-filter:blur(8px); }
 
 @media (max-width:800px) {
   .site-header { position:static; height:74px; padding:0 20px; backdrop-filter:none; }
