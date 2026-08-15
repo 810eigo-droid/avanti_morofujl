@@ -136,7 +136,7 @@ export default function Home() {
             <dl className="party-plan-facts"><div><dt>利用可能人数</dt><dd>4〜17名様</dd></div><div><dt>飲み放題</dt><dd>あり・2時間制</dd></div><div><dt>滞在可能時間</dt><dd>乾杯スタートから2時間15分</dd></div></dl>
             <div className="party-plan-menu"><h3>COURSE MENU</h3><ul><li>前菜2品<span>5種の鮮魚の豪華カルパッチョを含む</span></li><li>アヒージョ</li><li>パン</li><li>ピッツァ</li><li>パスタ</li><li>お肉<span>＋1,000円で国産牛肉ランプに変更可能</span></li></ul></div>
             <a className="party-plan-call" href={`tel:${phone.replaceAll("-", "")}`}><small>このコースを電話で予約する</small><strong>{phone}</strong></a>
-            <details className="party-plan-notes"><summary>注意事項を確認する</summary><div><p>飲み放題は2時間制（20分前ラストオーダー）です。</p><p>各コースのご予約は2日前までにご連絡ください。貸切・ご予算などもご相談いただけます。最大17名様まで着席可能です。</p><p>コース内容は一部変更になる場合がございます。</p><p><b>飲み物の例</b><br />ビール、ワイン、カクテル、ハイボール、焼酎、ソフトドリンク、ノンアルコールカクテルなど<br />※ビールは中瓶でお一人様1本まで（ご予約人数分）</p></div></details>
+            <details className="party-plan-notes"><summary>注意事項を確認する</summary><div><p><b>このコースは電話予約のみです。食べログなどのネット予約では受け付けておりません。</b></p><p>飲み放題は2時間制（20分前ラストオーダー）です。</p><p>各コースのご予約は2日前までにご連絡ください。貸切・ご予算などもご相談いただけます。最大17名様まで着席可能です。</p><p>コース内容は一部変更になる場合がございます。</p><p><b>飲み物の例</b><br />ビール、ワイン、カクテル、ハイボール、焼酎、ソフトドリンク、ノンアルコールカクテルなど<br />※ビールは中瓶でお一人様1本まで（ご予約人数分）</p></div></details>
           </div>
         </section>
       </section>
