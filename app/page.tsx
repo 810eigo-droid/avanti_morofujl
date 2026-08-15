@@ -57,7 +57,7 @@ export default function Home() {
           <a href="#story">お店について</a>
           <a href="#menu">料理とワイン</a>
           <a href="#hours">営業時間・定休日</a>
-          <a href="#access">店舗情報</a>
+          <a href="#access">アクセス</a>
         </nav>
         <a className="header-call" href={`tel:${phone.replaceAll("-", "")}`}>
           <small>ご予約・お問い合わせ</small>
