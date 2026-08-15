@@ -200,6 +200,7 @@ export default function Home() {
       </section>
 
       <section className="reservation" style={{ "--reservation-bg": "url(/images/footer-bg.webp)" } as React.CSSProperties}>
+        <img className="reservation-sp-image" src="/images/footer-bg-sp.webp" alt="" aria-hidden="true" />
         <p>お席に限りがあるため、ご予約がおすすめです。</p>
         <h2>今夜のテーブルを、<br />ご用意してお待ちしています。</h2>
         <a href={`tel:${phone.replaceAll("-", "")}`}><small>電話で予約する</small>{phone}</a>
