@@ -137,9 +137,9 @@ dd small { color:#776d62; }
 .map-pin::first-letter { transform:rotate(45deg); }
 .map strong { z-index:2; margin-top:38px; background:#f9f6f0; padding:13px 20px; font:12px sans-serif; }
 .reservation { position:relative; isolation:isolate; overflow:hidden; background-color:var(--wine); background-image:var(--reservation-bg); background-position:center; background-size:cover; color:white; text-align:center; padding:105px 20px; }
-.reservation:before { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(90deg,rgba(74,13,28,.7),rgba(93,23,36,.48),rgba(74,13,28,.7)); }
+.reservation:before { content:""; position:absolute; z-index:-1; inset:0; background:radial-gradient(ellipse 42% 72% at 50% 50%,rgba(35,5,13,.42) 0%,rgba(46,7,17,.2) 58%,transparent 100%); }
 .reservation>p { color:#e0c9c9; font-size:13px; letter-spacing:.1em; }
-.reservation h2 { margin:22px 0 35px; }
+.reservation h2 { margin:22px 0 35px; text-shadow:0 2px 12px #26071080; }
 .reservation>a { display:inline-block; border:1px solid #ffffff80; min-width:330px; padding:19px; font:26px Georgia,serif; }
 .reservation>a small { display:block; font:10px sans-serif; letter-spacing:.2em; margin-bottom:6px; }
 .reservation>span { display:block; color:#d8bfc3; font:10px sans-serif; margin-top:15px; }
