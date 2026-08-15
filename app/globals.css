@@ -399,3 +399,9 @@ main:before { content:""; position:fixed; z-index:90; inset:0; pointer-events:no
   *,*:before,*:after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
   .motion-ready .motion-reveal { opacity:1 !important; transform:none !important; }
 }
+
+/* Immediate rendering takes priority: no delayed reveals or decorative particles. */
+*,*:before,*:after { animation:none !important; transition-delay:0s !important; }
+main:before,.menu-gallery:before,.menu-gallery:after,.features:before,.features:after,.hero-copy-burst:after { display:none !important; content:none !important; }
+.section:not(.intro),.menu-gallery,.reservation,footer { content-visibility:visible; contain:none; }
+.motion-reveal,.motion-ready .motion-reveal,.motion-ready .motion-reveal.from-left,.motion-ready .motion-reveal.from-right { opacity:1 !important; transform:none !important; filter:none !important; }
