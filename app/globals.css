@@ -329,6 +329,10 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#b8aca0; }
 
 /* Mediterranean-night motion: decorative, lightweight, and touch-safe. */
 main:before { content:""; position:fixed; z-index:90; inset:0; pointer-events:none; opacity:.32; background:radial-gradient(circle at 12% 18%,#ffe8a8 0 1px,transparent 2px),radial-gradient(circle at 72% 28%,#ffc000 0 1px,transparent 2px),radial-gradient(circle at 88% 76%,#fff4c8 0 1px,transparent 2px); background-size:173px 181px,227px 211px,293px 251px; animation:starlight 8s ease-in-out infinite alternate; }
+.menu-gallery,.features { position:relative; isolation:isolate; overflow:hidden; }
+.menu-gallery:before,.menu-gallery:after,.features:before,.features:after { content:""; position:absolute; z-index:0; inset:-35% 0 -8%; pointer-events:none; background-image:radial-gradient(circle at 18% 92%,transparent 0 2px,#f8df9b80 2.5px 3.5px,transparent 4px),radial-gradient(circle at 42% 76%,transparent 0 1px,#fff2c777 1.5px 2.5px,transparent 3px),radial-gradient(circle at 68% 88%,transparent 0 3px,#e9c46a66 3.5px 4.5px,transparent 5px),radial-gradient(circle at 87% 68%,transparent 0 1.5px,#fff7d58c 2px 3px,transparent 3.5px); background-size:137px 211px,181px 257px,227px 293px,263px 337px; opacity:.62; animation:champagne-rise 17s linear infinite; }
+.menu-gallery:after,.features:after { inset:-20% -5% -25%; background-size:193px 277px,241px 319px,311px 371px,353px 419px; opacity:.35; animation-duration:25s; animation-delay:-11s; transform:translateX(17px); }
+.menu-gallery>*,.features>* { position:relative; z-index:1; }
 .hero-photo.image-loaded { animation:hero-breathe 16s ease-in-out infinite alternate; }
 .hero-photo:after { animation:hero-stars 7s ease-in-out infinite alternate; }
 .hero-content .eyebrow { animation:letter-glow 3.4s ease-in-out infinite; }
@@ -373,6 +377,7 @@ main:before { content:""; position:fixed; z-index:90; inset:0; pointer-events:no
 @keyframes ribbon-pop { 0%,100%{filter:brightness(1);transform:translateY(0)} 50%{filter:brightness(1.18);transform:translateY(-2px)} }
 @keyframes price-glow { 0%,100%{text-shadow:0 0 0 transparent} 50%{text-shadow:0 0 16px #ffc00070} }
 @keyframes top-bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+@keyframes champagne-rise { from{background-position:0 100%,30px 100%,70px 100%,110px 100%} to{background-position:10px -25%,45px -25%,55px -25%,125px -25%} }
 @media (max-width:800px) {
   main:before { opacity:.2; background-size:127px 139px,181px 167px,223px 211px; }
   .hero-facts div { animation-duration:5.6s; }
