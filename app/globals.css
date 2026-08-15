@@ -125,7 +125,7 @@ footer p { font:9px sans-serif; letter-spacing:.15em; color:#847d75; }
   .site-header.menu-open .menu-toggle span:nth-child(3) { transform:translateY(-9.5px) rotate(-45deg); }
   .hero { min-height:calc(100svh - 74px); align-items:end; isolation:isolate; }
   .hero:after { content:""; position:absolute; z-index:2; inset:14px; border:1px solid #e6c68b42; pointer-events:none; }
-  .hero-photo { background-image:var(--hero-mobile),var(--hero-desktop); background-position:center 48%; }
+  .hero-photo { background-image:var(--hero-mobile); background-position:center 48%; }
   .hero-photo:before { background:linear-gradient(180deg,rgba(25,12,10,.12) 0%,rgba(25,12,10,.18) 30%,rgba(20,10,9,.9) 100%); }
   .hero-photo:after { opacity:.13; background-size:25px 25px,37px 37px; }
   .hero-placeholder { right:50%; top:28%; transform:translate(50%,-50%); width:75%; padding:20px; }
