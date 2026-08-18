@@ -66,3 +66,18 @@
     if(event.key==='Escape')close();
   });
 })();
+(function(){
+  var track=document.querySelector('.mg-course-slider');
+  if(!track)return;
+  var dots=Array.from(document.querySelectorAll('.mg-course-dots button')),raf=0;
+  if(track.children.length<2||!dots.length)return;
+  function mark(){
+    raf=0;
+    var i=Math.round(track.scrollLeft/track.clientWidth);
+    dots.forEach(function(dot,n){dot.classList.toggle('is-active',n===i);});
+  }
+  dots.forEach(function(dot,i){
+    dot.addEventListener('click',function(){track.scrollTo({left:track.clientWidth*i,behavior:'smooth'});});
+  });
+  track.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(mark);},{passive:true});
+})();
