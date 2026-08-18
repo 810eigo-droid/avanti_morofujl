@@ -9,7 +9,11 @@
 .mg-tabs button{padding:0 10px;font-size:14px;line-height:1.45}
 .mg-seasonal{max-width:1180px;margin:0 auto 20px;padding:16px 20px;display:flex;flex-wrap:wrap;align-items:flex-start;gap:18px;border:1px solid #d9b54a55;background:#ffffff08}
 .mg-seasonal-label{flex:none;padding:5px 12px;background:var(--mg-gold);color:#17202b;font:700 11px sans-serif;letter-spacing:.12em}
-.mg-seasonal ul{flex:1;min-width:240px;margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.mg-seasonal-body{flex:1;min-width:240px}
+.mg-seasonal-intro{margin:0 0 12px;color:#c8d0d6;font-size:13px;line-height:1.7}
+.mg-seasonal-foot{margin:12px 0 0;color:#9fabb5;font-size:12px;line-height:1.75}
+.mg-seasonal-foot a{color:#ffd75e;text-decoration:underline;text-underline-offset:3px}
+.mg-seasonal ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
 .mg-seasonal li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:14px}
 .mg-seasonal b{font-weight:500}
 .mg-seasonal strong{flex:none;color:#ffe39a;font-weight:500}
