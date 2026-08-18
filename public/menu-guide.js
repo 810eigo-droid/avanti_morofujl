@@ -69,22 +69,49 @@
 (function(){
   var track=document.querySelector('.mg-course-slider');
   if(!track)return;
-  var dots=Array.from(document.querySelectorAll('.mg-course-dots button')),
+  var dotWrap=document.querySelector('.mg-course-dots'),
       prev=document.querySelector('.mg-course-prev'),
       next=document.querySelector('.mg-course-next'),
-      total=track.children.length,raf=0,downX=0,downY=0;
-  if(total<2)return;
+      raf=0,downX=0,downY=0;
+
+  // まだ用意されていない画像のスライドは、対応する丸印ごと取り除く
+  Array.prototype.slice.call(track.querySelectorAll('img')).forEach(function(img){
+    function drop(){
+      var i=Array.prototype.indexOf.call(track.children,img);
+      if(dotWrap&&dotWrap.children[i])dotWrap.children[i].remove();
+      img.remove();
+      sync();
+    }
+    if(img.complete){if(!img.naturalWidth)drop();}
+    else img.addEventListener('error',drop);
+  });
+
+  function count(){return track.children.length;}
+  function dots(){return dotWrap?Array.prototype.slice.call(dotWrap.children):[];}
   function current(){return Math.round(track.scrollLeft/track.clientWidth);}
+  var photo=track.parentNode;
   function mark(){
     raf=0;
     var i=current();
-    dots.forEach(function(dot,n){dot.classList.toggle('is-active',n===i);});
+    dots().forEach(function(dot,n){dot.classList.toggle('is-active',n===i);});
+    // 1枚目は実際のコース写真。2枚目以降はイメージ写真のため注記を出す
+    if(photo)photo.classList.toggle('is-sub',i>=1);
+  }
+  function sync(){
+    var single=count()<2;
+    [dotWrap,prev,next].forEach(function(el){if(el)el.style.display=single?'none':'';});
+    mark();
   }
   function goTo(i){
-    i=(i+total)%total;
+    var n=count();
+    if(n<2)return;
+    i=(i+n)%n;
     track.scrollTo({left:track.clientWidth*i,behavior:'smooth'});
   }
-  dots.forEach(function(dot,i){dot.addEventListener('click',function(){goTo(i);});});
+  if(dotWrap)dotWrap.addEventListener('click',function(event){
+    var button=event.target.closest('button');
+    if(button)goTo(dots().indexOf(button));
+  });
   if(prev)prev.addEventListener('click',function(){goTo(current()-1);});
   if(next)next.addEventListener('click',function(){goTo(current()+1);});
   // 写真をタップしても次の1枚へ。指で払った場合は送らない
@@ -95,7 +122,9 @@
     goTo(current()+1);
   });
   track.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(mark);},{passive:true});
+  sync();
 })();
+
 (function(){
   var burst=document.querySelector('.mg-hero-burst');
   if(!burst)return;
