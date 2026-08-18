@@ -285,3 +285,33 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-note{top:9px;right:9px;font-size:9px}
 .mg-hero-actions a:not(:first-child){display:none}
 }
+
+/* ===== 各サービスへのリンク（旧トップページから移植） ===== */
+.mg-social{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin-top:26px;font-family:sans-serif}
+.mg-social a{min-width:0;display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:9px;padding:10px 11px;border:1px solid #c9beb0;background:#ffffffc9;box-shadow:0 8px 22px #49392a14;transition:transform .2s,border-color .2s,box-shadow .2s}
+.mg-social a:hover{transform:translateY(-3px);border-color:var(--mg-gold);box-shadow:0 12px 28px #49392a24}
+.mg-social-mark{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#fff;font:700 10px Arial,sans-serif;transition:transform .45s cubic-bezier(.2,.9,.2,1.3)}
+.mg-social a:hover .mg-social-mark{transform:rotate(-7deg) scale(1.12)}
+.mg-social-copy{min-width:0;display:block}
+.mg-social-copy small{display:block;overflow:hidden;color:#766b60;font:8px/1.2 Arial,sans-serif;letter-spacing:.04em;white-space:nowrap;text-overflow:ellipsis}
+.mg-social-copy strong{display:block;overflow:hidden;margin-top:3px;color:#28221f;font:700 11px/1.2 Arial,sans-serif;white-space:nowrap;text-overflow:ellipsis}
+.mg-social a>b{display:grid;place-items:center;color:#8b7d6f}
+.mg-social a>b svg{display:block;width:14px;height:14px}
+.mg-social-ig .mg-social-mark{background:linear-gradient(135deg,#6748d5,#c12d78 52%,#e39a34)}
+.mg-social-line .mg-social-mark{background:#06c755;font-size:7px}
+.mg-social-fb .mg-social-mark{background:#1877f2;font:700 22px Georgia,serif}
+.mg-social-tabelog .mg-social-mark{background:#9b2d24}
+.mg-social-gnavi .mg-social-mark{background:#d66a1f}
+@media(max-width:900px){
+.mg-social{grid-template-columns:1fr;gap:8px;margin-top:22px}
+.mg-social a{padding:9px 11px}
+.mg-social-copy small{font-size:9.5px}
+.mg-social-copy strong{font-size:12.5px}
+}
+
+/* ===== スマホのFV：文字位置・ボタン配色・バッジ位置の調整 ===== */
+@media(max-width:900px){
+.mg-hero-content{top:53%}
+.mg-hero-actions a{background:#111e2bd9;border-color:#e6cf93;color:#f6e4b4}
+.mg-hero-facts{bottom:62px}
+}
