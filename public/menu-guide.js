@@ -69,15 +69,30 @@
 (function(){
   var track=document.querySelector('.mg-course-slider');
   if(!track)return;
-  var dots=Array.from(document.querySelectorAll('.mg-course-dots button')),raf=0;
-  if(track.children.length<2||!dots.length)return;
+  var dots=Array.from(document.querySelectorAll('.mg-course-dots button')),
+      prev=document.querySelector('.mg-course-prev'),
+      next=document.querySelector('.mg-course-next'),
+      total=track.children.length,raf=0,downX=0,downY=0;
+  if(total<2)return;
+  function current(){return Math.round(track.scrollLeft/track.clientWidth);}
   function mark(){
     raf=0;
-    var i=Math.round(track.scrollLeft/track.clientWidth);
+    var i=current();
     dots.forEach(function(dot,n){dot.classList.toggle('is-active',n===i);});
   }
-  dots.forEach(function(dot,i){
-    dot.addEventListener('click',function(){track.scrollTo({left:track.clientWidth*i,behavior:'smooth'});});
+  function goTo(i){
+    i=(i+total)%total;
+    track.scrollTo({left:track.clientWidth*i,behavior:'smooth'});
+  }
+  dots.forEach(function(dot,i){dot.addEventListener('click',function(){goTo(i);});});
+  if(prev)prev.addEventListener('click',function(){goTo(current()-1);});
+  if(next)next.addEventListener('click',function(){goTo(current()+1);});
+  // 写真をタップしても次の1枚へ。指で払った場合は送らない
+  track.addEventListener('pointerdown',function(event){downX=event.clientX;downY=event.clientY;},{passive:true});
+  track.addEventListener('click',function(event){
+    if(event.target.closest('.mg-course-arrow'))return;
+    if(Math.abs(event.clientX-downX)>10||Math.abs(event.clientY-downY)>10)return;
+    goTo(current()+1);
   });
   track.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(mark);},{passive:true});
 })();
