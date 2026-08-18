@@ -130,3 +130,38 @@
 .mg-tabs{top:72px;box-shadow:0 10px 18px #0b1219a6}
 .mg-tabs button{min-height:52px;flex:0 0 auto;padding:0 18px;font-size:12.5px;white-space:nowrap}
 }
+
+/* ===== スマホ（700px以下）の予約セクション =====
+   footer-bg-sp.webp は文字もボタンも入った完成デザインのため、
+   HTML側の文字パネルは出さず、画像を原寸比のまま全面に見せる。
+   既存の電話リンクを全面に広げ、どこをタップしても電話ダイアログが開く。 */
+@media(max-width:700px){
+.mg-final{position:relative;padding:0;min-height:179vw;background:url('/images/footer-bg-sp.webp') center/cover;cursor:pointer}
+.mg-final-panel{position:absolute;inset:0;width:auto;max-width:none;margin:0;padding:0;background:none;border:0;backdrop-filter:none}
+.mg-final-panel>span,.mg-final-panel>h2,.mg-final-panel>p{display:none}
+.mg-final-panel a{position:absolute;inset:0;display:block;max-width:none;margin:0;padding:0;border:0;font-size:0;color:transparent}
+}
+
+/* ===== 戻るボタンの矢印（明朝体には↑の字形が無い端末があるため図形で描く） ===== */
+.mg-to-top svg{display:block;width:18px;height:18px}
+
+@media(max-width:900px){
+/* ===== スマホ：ヘッダーは流し、ハンバーガーだけ固定して縦の余白を稼ぐ ===== */
+.mg-header{position:static}
+.mg-menu-toggle{position:fixed;top:10px;right:10px;z-index:60;background:#111e2bee;backdrop-filter:blur(3px)}
+.mg-nav{position:fixed;top:64px;left:0;right:0}
+.mg-tabs{top:0}
+.mg-menu,.mg-content-section{scroll-margin-top:8px}
+.mg-to-top svg{width:15px;height:15px}
+
+/* ===== スマホ：ファーストビューの見出しが1行に収まるよう調整 ===== */
+.mg-hero-content{left:20px;right:20px}
+.mg-hero h1{font-size:clamp(27px,8.8vw,36px);line-height:1.32}
+}
+
+@media(max-width:900px){
+/* ===== スマホ：下部固定バーを低くして画面を広く使う ===== */
+.mg-mobile-cta a{padding:9px 4px;font-size:12px;line-height:1.35}
+.mg-hero-facts{bottom:38px}
+.mg-to-top{bottom:44px}
+}
