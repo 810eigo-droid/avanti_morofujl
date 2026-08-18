@@ -15,3 +15,35 @@
   slider.addEventListener('pointerdown',function(){schedule(6500);},{passive:true});
   schedule(2000);
 })();
+(function(){
+  var modal=document.getElementById('mg-call');
+  if(!modal)return;
+  var opener=null;
+  function open(event){
+    event.preventDefault();
+    opener=event.currentTarget;
+    modal.hidden=false;
+    document.body.style.overflow='hidden';
+    var first=modal.querySelector('.mg-call-option');
+    if(first)first.focus();
+  }
+  function close(){
+    if(modal.hidden)return;
+    modal.hidden=true;
+    document.body.style.overflow='';
+    if(opener&&opener.focus)opener.focus();
+  }
+  document.querySelectorAll('a[href^="tel:"]').forEach(function(link){
+    if(modal.contains(link))return;
+    link.addEventListener('click',open);
+  });
+  modal.querySelectorAll('[data-mg-call-close]').forEach(function(el){
+    el.addEventListener('click',close);
+  });
+  modal.querySelectorAll('.mg-call-option').forEach(function(el){
+    el.addEventListener('click',function(){setTimeout(close,150)});
+  });
+  document.addEventListener('keydown',function(event){
+    if(event.key==='Escape')close();
+  });
+})();

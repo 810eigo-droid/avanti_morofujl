@@ -3,3 +3,89 @@
 .mg-content-section{padding:110px 8vw;scroll-margin-top:90px}.mg-two-col{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.mg-two-col-reverse{grid-template-columns:.8fr 1.2fr}.mg-kicker{color:#b5892f;font:700 10px Arial,sans-serif;letter-spacing:.28em}.mg-content-section h2{margin:16px 0 25px;font-size:clamp(34px,4vw,56px);font-weight:400;line-height:1.45}.mg-content-section p{line-height:2;color:#5d544d}.mg-number-feature{display:flex;align-items:center;gap:18px;margin-top:30px;border-top:1px solid #cbbd9d;padding-top:18px}.mg-number-feature strong{color:var(--mg-wine);font:italic 72px Georgia,serif}.mg-number-feature span{line-height:1.7}.mg-owner{background:#201918;color:#fff}.mg-owner p{color:#d3c8bc}.mg-owner blockquote{margin:30px 0 0;padding:22px 25px;border-left:3px solid var(--mg-gold);background:#ffffff08;line-height:2;color:#f4e6ce}.mg-owner-photo{min-height:560px}.mg-scenes{background:#f3ecdf}.mg-scene-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.mg-scene-grid article{padding:38px 30px;background:#fff;border-top:3px solid var(--mg-wine);box-shadow:0 12px 28px #55452f12}.mg-scene-grid span{color:#b58a2c;font:italic 25px Georgia,serif}.mg-scene-grid h3{font-size:24px;font-weight:400}.mg-budget{max-width:1180px;margin:34px auto 0!important;padding:20px;text-align:center;background:var(--mg-navy);color:#fff!important}.mg-budget strong{color:#ffe092}.mg-group{background:#ece2d1}.mg-group ul{padding:0;list-style:none}.mg-group li{padding:12px 0;border-bottom:1px solid #baac95}.mg-group li:before{content:"◆";margin-right:10px;color:var(--mg-gold)}.mg-outline-call{display:block;margin-top:28px;padding:16px;border:1px solid var(--mg-wine);color:var(--mg-wine);text-align:center;font-weight:700}.mg-faq{background:#fff}.mg-faq-list{max-width:980px;margin:auto}.mg-faq-list details{border-bottom:1px solid #d6cbbb}.mg-faq-list summary{padding:24px 44px 24px 5px;cursor:pointer;font-size:17px;font-weight:700;position:relative}.mg-faq-list summary:after{content:"＋";position:absolute;right:10px;color:var(--mg-wine)}.mg-faq-list details[open] summary:after{content:"−"}.mg-faq-list details p{padding:0 20px 22px;margin:0}.mg-access{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;background:#f6f0e6}.mg-access-info dl div{display:grid;grid-template-columns:100px 1fr;padding:14px 0;border-bottom:1px solid #cfc2ae}.mg-access-info dt{color:#8d7964}.mg-access-info dd{margin:0;line-height:1.7}.mg-access-info>a{display:block;margin-top:25px;padding:15px;background:var(--mg-wine);color:#fff;text-align:center}.mg-map iframe{width:100%;height:480px;border:0}.mg-map p{margin:0!important;padding:15px;background:var(--mg-navy);color:#fff!important;text-align:center}.mg-final{padding:115px 20px;text-align:center;background:linear-gradient(#641124e8,#641124e8),url('/images/footer-bg.webp') center/cover;color:#fff}.mg-final>span{color:#f3d273;font:700 10px Arial,sans-serif;letter-spacing:.3em}.mg-final h2{margin:20px 0;font-size:clamp(36px,5vw,64px);font-weight:400;line-height:1.55}.mg-final p{color:#eedde0}.mg-final a{display:grid;max-width:380px;margin:30px auto 0;padding:16px;border:1px solid #e5c89c;font:700 28px Georgia,serif}.mg-final a small{font:10px sans-serif}.mg-footer{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:35px 7vw;background:#111e2b;color:#fff}.mg-footer img{width:150px}.mg-footer a{color:#f0d477}.mg-mobile-cta{display:none}.mg-to-top{position:fixed;z-index:60;right:18px;bottom:22px;width:44px;height:44px;display:grid;place-items:center;border:1px solid #d9b54a;border-radius:50%;background:#111e2be8;color:#fff}
 @media(max-width:900px){.mg-content-section{padding:75px 24px;scroll-margin-top:72px}.mg-two-col,.mg-two-col-reverse{grid-template-columns:1fr;gap:35px}.mg-owner-photo{min-height:460px;order:2}.mg-scene-grid{grid-template-columns:1fr}.mg-access{grid-template-columns:1fr}.mg-map iframe{height:390px}.mg-footer{padding:30px 24px 90px;display:grid;text-align:center;justify-items:center}.mg-mobile-cta{display:grid;grid-template-columns:1fr 1fr;position:fixed;z-index:70;left:0;right:0;bottom:0}.mg-mobile-cta a{padding:13px 5px;text-align:center;background:#f5eee1;color:var(--mg-wine);font-weight:700}.mg-mobile-cta a:first-child{background:var(--mg-wine);color:#fff}.mg-to-top{right:8px;bottom:58px;width:36px;height:36px}.mg-access-info dl div{grid-template-columns:80px 1fr}}
 .mg-placeholder.is-loaded{background-position:center;background-size:cover;border-style:solid}.mg-placeholder.is-loaded>*{display:none}
+
+/* ===== メニュー・価格セクション（5タブ構成／季節のおすすめ／税別表記） ===== */
+.mg-tabs{grid-template-columns:repeat(5,1fr)}
+.mg-tabs button{padding:0 10px;font-size:14px;line-height:1.45}
+.mg-seasonal{max-width:1180px;margin:0 auto 20px;padding:16px 20px;display:flex;flex-wrap:wrap;align-items:flex-start;gap:18px;border:1px solid #d9b54a55;background:#ffffff08}
+.mg-seasonal-label{flex:none;padding:5px 12px;background:var(--mg-gold);color:#17202b;font:700 11px sans-serif;letter-spacing:.12em}
+.mg-seasonal ul{flex:1;min-width:240px;margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.mg-seasonal li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;font-size:14px}
+.mg-seasonal b{font-weight:500}
+.mg-seasonal strong{flex:none;color:#ffe39a;font-weight:500}
+.mg-tax-note{max-width:1180px;margin:0 auto 26px;color:#c8d0d6;font-size:13px;line-height:1.75}
+.mg-tax-note strong{color:#ffe39a}
+.mg-menu-group{margin-bottom:38px}
+.mg-menu-group:last-child{margin-bottom:0}
+.mg-menu-group>h3{margin:0;padding-bottom:10px;border-bottom:1px solid #d9b54a66;color:#ffe39a;font-size:20px;font-weight:400;letter-spacing:.04em}
+.mg-menu-note{margin:12px 0 0;color:#9fabb5;font-size:12px;line-height:1.75}
+.mg-menu-note-intro{margin:10px 0 0}
+.mg-menu-list>article>strong.mg-price-set{display:grid;gap:5px;justify-items:end;text-align:right}
+.mg-price-set span{white-space:nowrap}
+.mg-price-set small{margin-right:8px;color:#9fabb5;font-size:11px;font-weight:400}
+.mg-tag{display:inline-block;margin-left:8px;padding:3px 8px;border:1px solid #d9b54a;color:#ffd75e;font:700 10px sans-serif;letter-spacing:.08em;vertical-align:2px;white-space:nowrap}
+@media(max-width:900px){
+.mg-tabs button{flex:0 0 138px;font-size:13px}
+.mg-seasonal{margin-bottom:16px;padding:14px 16px;gap:12px}
+.mg-seasonal li{font-size:13px}
+.mg-menu-group>h3{font-size:18px}
+.mg-menu-list>article>strong.mg-price-set{margin-top:10px;justify-items:start;text-align:left}
+.mg-tag{margin-left:6px}
+}
+.mg-drink-intro{margin-bottom:32px}
+
+/* ===== ヒーロー：ボタン3つ ＋ 金色バッジ（旧トップページのデザインを移植） ===== */
+.mg-hero-actions{flex-wrap:wrap}
+.mg-hero-actions a{position:relative;overflow:hidden;isolation:isolate;transition:.2s}
+.mg-hero-actions a:not(:first-child){background:#111e2bd9;border-color:#e6cf93}
+.mg-hero-actions a:after{content:"";position:absolute;z-index:-1;top:-120%;left:-45%;width:28%;height:340%;transform:rotate(24deg);background:linear-gradient(90deg,transparent,#fff9,transparent);transition:left .7s ease}
+.mg-hero-actions a:hover:after{left:125%}
+.mg-hero-facts{right:4vw;left:auto;bottom:20px;gap:6px;background:none;color:#241914;box-shadow:none}
+.mg-hero-facts div{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:190px;min-height:92px;padding:12px 16px;overflow:hidden;border:1px solid #8c682c;background:linear-gradient(145deg,rgba(249,221,145,.97),rgba(205,160,73,.96));box-shadow:inset 0 0 0 3px #f9e3a566,0 10px 24px #160d0b32;text-align:center;animation:mg-badge-float 4.8s ease-in-out infinite}
+.mg-hero-facts div:after{content:"";position:absolute;inset:6px;border:1px solid #72501e55;pointer-events:none}
+.mg-hero-facts div:before{content:"";position:absolute;z-index:2;inset:-80% -35%;transform:translateX(-70%) rotate(20deg);background:linear-gradient(90deg,transparent,#fff8,transparent);animation:mg-badge-shine 6s ease-in-out infinite;pointer-events:none}
+.mg-hero-facts div:nth-child(2){animation-delay:-1.6s}
+.mg-hero-facts div:nth-child(3){animation-delay:-3.2s}
+.mg-hero-facts div:nth-child(2):before{animation-delay:1.2s}
+.mg-hero-facts div:nth-child(3):before{animation-delay:2.4s}
+.mg-hero-facts strong{display:block;margin:0 0 5px;color:#664a28;font:11px Arial,sans-serif;letter-spacing:.15em}
+.mg-hero-facts span{display:block;min-width:0;padding:0;border:0;font-size:20px;line-height:1.2;white-space:nowrap}
+@keyframes mg-badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes mg-badge-shine{0%,64%{transform:translateX(-70%) rotate(20deg)}84%,100%{transform:translateX(80%) rotate(20deg)}}
+
+/* ===== 電話番号の選択ダイアログ ===== */
+.mg-call-modal[hidden]{display:none}
+.mg-call-modal{position:fixed;z-index:100;inset:0;display:flex;align-items:center;justify-content:center;padding:20px}
+.mg-call-backdrop{position:absolute;inset:0;background:#0b1219cc;backdrop-filter:blur(3px)}
+.mg-call-box{position:relative;width:100%;max-width:430px;padding:34px 30px 28px;border:1px solid #d9b54a;background:var(--mg-navy);color:#fff;box-shadow:0 24px 60px #00000059;text-align:center}
+.mg-call-close{position:absolute;top:8px;right:10px;width:38px;height:38px;border:0;background:none;color:#cbd3d9;font-size:24px;line-height:1;cursor:pointer}
+.mg-call-close:hover{color:#fff}
+.mg-call-kicker{color:#b5892f;font:700 10px Arial,sans-serif;letter-spacing:.3em}
+.mg-call-box h2{margin:12px 0 6px;font-size:23px;font-weight:400}
+.mg-call-lead{margin:0 0 20px;color:#b9c1c7;font-size:13px}
+.mg-call-option{display:grid;gap:3px;margin-bottom:12px;padding:15px 12px;border:1px solid #d9b54a;background:#ffffff0a;transition:.2s}
+.mg-call-option:hover{background:var(--mg-gold);color:#17202b}
+.mg-call-option small{color:#c8d0d6;font:11px sans-serif;letter-spacing:.1em}
+.mg-call-option:hover small{color:#4a3a17}
+.mg-call-option strong{font:700 25px Georgia,serif;letter-spacing:.02em}
+.mg-call-note{margin:14px 0 0;color:#9fabb5;font-size:12px;line-height:1.8;text-align:left}
+@media(prefers-reduced-motion:reduce){
+.mg-hero-facts div,.mg-hero-facts div:before{animation:none}
+}
+@media(max-width:900px){
+.mg-hero-actions{gap:10px}
+.mg-hero-actions a{padding:14px 16px}
+.mg-hero-facts{right:0;left:0;bottom:10px;gap:4px;margin:0 10px}
+.mg-hero-facts div{width:auto;flex:1;min-height:66px;padding:8px 3px;box-shadow:inset 0 0 0 2px #f9e3a566,0 7px 16px #160d0b29}
+.mg-hero-facts div:after{inset:4px}
+.mg-hero-facts strong{margin:0 0 3px;font-size:9px;letter-spacing:.04em}
+.mg-hero-facts span{font-size:14px}
+.mg-call-box{padding:30px 20px 24px}
+.mg-call-option strong{font-size:22px}
+}
+
+/* スマホ：金色バッジが下部固定CTAバーに隠れないよう持ち上げる */
+@media(max-width:900px){
+.mg-hero-facts{bottom:58px}
+.mg-call-box h2{font-size:20px}
+}
