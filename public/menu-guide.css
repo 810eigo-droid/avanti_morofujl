@@ -106,3 +106,9 @@
 .mg-tab-visual{margin-bottom:26px;min-height:150px}
 .mg-tab-visual.is-loaded>.mg-image-note{top:7px;right:8px;padding:3px 7px;font-size:10px}
 }
+
+/* ===== 「こんな夜に」カードの正方形写真 ===== */
+.mg-scene-photo{margin:-38px -30px 26px;width:auto;min-height:0;padding:0;aspect-ratio:1/1}
+.mg-scene-photo>strong,.mg-scene-photo>span{display:none}
+.mg-scene-photo>small{font-size:10px;letter-spacing:.12em}
+.mg-scene-photo.is-loaded{border:0}
