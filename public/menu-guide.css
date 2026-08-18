@@ -165,3 +165,25 @@
 .mg-hero-facts{bottom:38px}
 .mg-to-top{bottom:44px}
 }
+
+/* ===== おすすめコース：写真のスワイプ切り替え ===== */
+.mg-course-photo{position:relative}
+.mg-course-slider{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.mg-course-slider::-webkit-scrollbar{display:none}
+.mg-course-slider img{flex:0 0 100%;scroll-snap-align:start}
+.mg-course-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:7px}
+.mg-course-dots button{width:9px;height:9px;padding:0;border:1px solid #f0dca8;border-radius:50%;background:#0b1219a6;cursor:pointer}
+.mg-course-dots button.is-active{background:var(--mg-gold)}
+
+/* ===== おすすめコース：内容を箇条書きの枠で見せる ===== */
+.mg-course-items{margin:22px 0 0;padding:22px;border:1px solid #d9b54a55;background:#ffffff08}
+.mg-course-items>b{display:block;margin-bottom:15px;color:#ffe39a;font:700 11px sans-serif;letter-spacing:.18em}
+.mg-course-items ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 18px}
+.mg-course-items li{position:relative;padding-left:19px;font-size:15px}
+.mg-course-items li:before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border:1px solid var(--mg-gold);transform:rotate(45deg)}
+.mg-course-items>small{display:block;margin-top:17px;color:#aeb8c0;font-size:12px;line-height:1.8}
+@media(max-width:900px){
+.mg-course-items{padding:16px}
+.mg-course-items ul{grid-template-columns:1fr;gap:9px}
+.mg-course-items li{font-size:14px}
+}
