@@ -234,3 +234,38 @@
 .mg-course-prev{left:8px}
 .mg-course-next{right:8px}
 }
+
+/* ===== ファーストビューのリード文：バースト演出 ===== */
+.mg-hero-burst{position:relative;display:inline-block;transform-origin:left center}
+.mg-hero-burst.is-bursting{animation:mg-burst-in 1.15s cubic-bezier(.16,1,.3,1) both}
+.mg-hero-burst.is-bursting:after{content:"";position:absolute;z-index:-1;inset:-22px -35px;opacity:0;pointer-events:none;background:radial-gradient(ellipse at 18% 50%,#ffd66b70 0%,#ffc00024 24%,transparent 68%);animation:mg-burst-flash 1.4s ease-out both}
+@keyframes mg-burst-in{0%{opacity:0;transform:scale(.72);letter-spacing:.3em;filter:blur(5px)}58%{opacity:1;transform:scale(1.035);letter-spacing:.06em;filter:blur(0)}100%{opacity:1;transform:scale(1);letter-spacing:normal;filter:blur(0)}}
+@keyframes mg-burst-flash{0%{opacity:0;transform:scale(.3)}35%{opacity:1}100%{opacity:0;transform:scale(1.45)}}
+@media(prefers-reduced-motion:reduce){
+.mg-hero-burst.is-bursting,.mg-hero-burst.is-bursting:after{animation:none}
+}
+
+/* ===== スクロールに合わせた登場アニメーション ===== */
+html.mg-motion .mg-reveal{opacity:0}
+html.mg-motion .mg-reveal.is-in{animation:mg-rise .95s cubic-bezier(.16,1,.3,1) both}
+html.mg-motion .mg-reveal-left.is-in{animation-name:mg-slide-left}
+html.mg-motion .mg-reveal-right.is-in{animation-name:mg-slide-right}
+html.mg-motion .mg-reveal-zoom.is-in{animation-name:mg-zoom}
+html.mg-motion .mg-reveal-text.is-in{animation-name:mg-text-in;animation-duration:1.05s}
+@keyframes mg-rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes mg-slide-left{from{opacity:0;transform:translateX(-70px) skewX(-1.5deg);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes mg-slide-right{from{opacity:0;transform:translateX(70px) skewX(1.5deg);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+@keyframes mg-zoom{from{opacity:0;transform:scale(.93);filter:blur(2px)}to{opacity:1;transform:none;filter:none}}
+@keyframes mg-text-in{0%{opacity:0;transform:translateY(24px);letter-spacing:.2em;filter:blur(4px)}60%{opacity:1;filter:blur(0)}100%{opacity:1;transform:none;letter-spacing:normal;filter:none}}
+
+/* 価格や数字をゆっくり脈打たせる */
+html.mg-motion .mg-pulse{animation:mg-pulse 3.2s ease-in-out infinite}
+@keyframes mg-pulse{0%,100%{text-shadow:0 0 0 transparent}50%{text-shadow:0 0 18px #ffc00075}}
+
+@media(prefers-reduced-motion:reduce){
+html.mg-motion .mg-reveal{opacity:1}
+html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
+}
+
+/* 予約セクションのボタン：番号を外し文字のみに */
+.mg-final a{font:700 24px "Yu Mincho","Hiragino Mincho ProN",serif;letter-spacing:.06em}
