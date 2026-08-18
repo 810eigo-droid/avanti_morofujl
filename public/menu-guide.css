@@ -358,3 +358,6 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-name{transition:opacity .5s ease}
 .mg-hero-name.is-following{position:fixed;z-index:45;top:110px;right:20px}
 .mg-hero-name.is-fading{opacity:0}
+
+/* アクセス情報：補足行（お支払いの内訳など） */
+.mg-access-info dd small{display:block;margin-top:6px;color:#6f645a;font-size:12px;line-height:1.7}
