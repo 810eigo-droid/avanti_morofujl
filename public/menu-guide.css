@@ -237,12 +237,12 @@
 
 /* ===== ファーストビューのリード文：バースト演出 ===== */
 .mg-hero-burst{position:relative;display:inline-block;transform-origin:left center}
-.mg-hero-burst.is-bursting{animation:mg-burst-in 1.15s cubic-bezier(.16,1,.3,1) both}
-.mg-hero-burst.is-bursting:after{content:"";position:absolute;z-index:-1;inset:-22px -35px;opacity:0;pointer-events:none;background:radial-gradient(ellipse at 18% 50%,#ffd66b70 0%,#ffc00024 24%,transparent 68%);animation:mg-burst-flash 1.4s ease-out both}
+.mg-hero-burst.is-playing{animation:mg-burst-in 1.15s .38s cubic-bezier(.16,1,.3,1) both}
+.mg-hero-burst.is-playing:after{content:"";position:absolute;z-index:-1;inset:-22px -35px;opacity:0;pointer-events:none;background:radial-gradient(ellipse at 18% 50%,#ffd66b70 0%,#ffc00024 24%,transparent 68%);animation:mg-burst-flash 1.4s .38s ease-out both}
 @keyframes mg-burst-in{0%{opacity:0;transform:scale(.72);letter-spacing:.3em;filter:blur(5px)}58%{opacity:1;transform:scale(1.035);letter-spacing:.06em;filter:blur(0)}100%{opacity:1;transform:scale(1);letter-spacing:normal;filter:blur(0)}}
 @keyframes mg-burst-flash{0%{opacity:0;transform:scale(.3)}35%{opacity:1}100%{opacity:0;transform:scale(1.45)}}
 @media(prefers-reduced-motion:reduce){
-.mg-hero-burst.is-bursting,.mg-hero-burst.is-bursting:after{animation:none}
+.mg-hero-burst.is-playing,.mg-hero-burst.is-playing:after,.mg-hero-line.is-playing{animation:none}
 }
 
 /* ===== スクロールに合わせた登場アニメーション ===== */
@@ -315,3 +315,9 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-actions a{background:#111e2bd9;border-color:#e6cf93;color:#f6e4b4}
 .mg-hero-facts{bottom:62px}
 }
+
+/* FVの見出しをはずむように出す */
+.mg-hero-line{display:inline-block;transform-origin:left center}
+.mg-hero-line.is-playing{animation:mg-pop 1s cubic-bezier(.2,.9,.25,1.25) both}
+.mg-hero-line-2.is-playing{animation-delay:.18s}
+@keyframes mg-pop{0%{opacity:0;transform:scale(.82) translateY(16px);filter:blur(6px)}55%{opacity:1;transform:scale(1.035) translateY(0);filter:blur(0)}78%{transform:scale(.99)}100%{opacity:1;transform:scale(1);filter:none}}

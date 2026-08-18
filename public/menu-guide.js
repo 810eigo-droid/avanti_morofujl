@@ -126,15 +126,16 @@
 })();
 
 (function(){
-  var burst=document.querySelector('.mg-hero-burst');
-  if(!burst)return;
+  // FVの見出し2行と、その下のリード文をまとめて演出する
+  var parts=Array.prototype.slice.call(document.querySelectorAll('.mg-hero-line,.mg-hero-burst'));
+  if(!parts.length)return;
   function play(){
-    burst.classList.remove('is-bursting');
-    void burst.offsetWidth;              // アニメーションを頭から再生し直すためのリセット
-    burst.classList.add('is-bursting');
+    parts.forEach(function(el){el.classList.remove('is-playing');});
+    void document.body.offsetWidth;      // アニメーションを頭から再生し直すためのリセット
+    parts.forEach(function(el){el.classList.add('is-playing');});
   }
   play();
-  burst.addEventListener('click',play);
+  parts.forEach(function(el){el.addEventListener('click',play);});
   // 一度画面から出て、戻ってきたときにもう一度
   if('IntersectionObserver' in window){
     var wasOut=false;
@@ -143,61 +144,8 @@
         if(!entry.isIntersecting){wasOut=true;return;}
         if(wasOut){wasOut=false;play();}
       });
-    },{threshold:.6}).observe(burst);
+    },{threshold:.6}).observe(parts[0]);
   }
   // 別ページから戻ってきたとき
   addEventListener('pageshow',function(event){if(event.persisted)play();});
-})();
-(function(){
-  if(!('IntersectionObserver' in window))return;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  document.documentElement.classList.add('mg-motion');
-
-  // [セレクタ, 動き] の順に割り当てる。先に付いたものが優先される
-  var plan=[
-    ['.mg-section-head','mg-reveal-text'],
-    ['.mg-seasonal','mg-reveal'],
-    ['.mg-tax-note','mg-reveal'],
-    ['.mg-tab-visual','mg-reveal-zoom'],
-    ['.mg-course-photo','mg-reveal-left'],
-    ['.mg-course>div:last-child','mg-reveal-right'],
-    ['.mg-drink-intro','mg-reveal'],
-    ['.mg-menu-group','mg-reveal'],
-    ['.mg-two-col>div:first-child','mg-reveal-left'],
-    ['.mg-two-col>div:last-child','mg-reveal-right'],
-    ['.mg-scene-grid article','mg-reveal'],
-    ['.mg-budget','mg-reveal'],
-    ['.mg-faq-list details','mg-reveal'],
-    ['.mg-access-info','mg-reveal-left'],
-    ['.mg-map','mg-reveal-right']
-  ];
-
-  var items=[];
-  plan.forEach(function(entry){
-    document.querySelectorAll(entry[0]).forEach(function(el){
-      if(el.classList.contains('mg-reveal'))return;      // 二重指定を避ける
-      el.classList.add('mg-reveal',entry[1]);
-      // 兄弟が並ぶ場合は順に遅らせて、流れるように出す
-      var order=Array.prototype.indexOf.call(el.parentNode.children,el);
-      if(order>0)el.style.animationDelay=Math.min(order,5)*90+'ms';
-      items.push(el);
-    });
-  });
-
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      // 画面に入ったとき、または上へ通り過ぎたときに表示する
-      // （素早くスクロールしても取り残されないようにするため）
-      if(!entry.isIntersecting&&entry.boundingClientRect.top>=0)return;
-      entry.target.classList.add('is-in');
-      observer.unobserve(entry.target);
-    });
-  },{threshold:.12,rootMargin:'0px 0px -7% 0px'});
-  items.forEach(function(el){observer.observe(el);});
-
-  // 価格と数字はゆっくり脈打たせて目を引く
-  ['.mg-price','.mg-number-feature strong','.mg-number-price'].forEach(function(selector){
-    var el=document.querySelector(selector);
-    if(el)el.classList.add('mg-pulse');
-  });
 })();
