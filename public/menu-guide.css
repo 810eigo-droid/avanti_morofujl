@@ -343,3 +343,6 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-name{top:12px;right:13px;font-size:11.5px;letter-spacing:.08em}
 .mg-nav{top:0;padding-top:64px;background:var(--mg-navy)}
 }
+
+/* 見出しを伴わずリード文だけ出すときは、待たずにすぐ始める */
+.mg-hero-burst.is-playing.is-solo,.mg-hero-burst.is-playing.is-solo:after{animation-delay:0s}

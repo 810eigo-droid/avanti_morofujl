@@ -126,24 +126,32 @@
 })();
 
 (function(){
-  // FVの見出し2行と、その下のリード文をまとめて演出する
-  var parts=Array.prototype.slice.call(document.querySelectorAll('.mg-hero-line,.mg-hero-burst'));
-  if(!parts.length)return;
-  var autoPlays=0,LIMIT=2;   // 自動再生は読み込み時と1回戻ったときの計2回まで
-  function play(){
-    parts.forEach(function(el){el.classList.remove('is-playing');});
+  // FVの見出し2行（ポップ）と、その下のリード文（バースト）
+  var lines=Array.prototype.slice.call(document.querySelectorAll('.mg-hero-line')),
+      lead=document.querySelector('.mg-hero-burst'),
+      all=lines.concat(lead?[lead]:[]);
+  if(!all.length)return;
+
+  var linePlays=0,LINE_LIMIT=2;   // 見出しの自動再生は読み込み時と1回戻ったときの計2回まで
+
+  function restart(targets,solo){
+    targets.forEach(function(el){el.classList.remove('is-playing','is-solo');});
     void document.body.offsetWidth;      // アニメーションを頭から再生し直すためのリセット
-    parts.forEach(function(el){el.classList.add('is-playing');});
+    targets.forEach(function(el){
+      if(solo&&el===lead)el.classList.add('is-solo');   // 見出しを待たずすぐ出す
+      el.classList.add('is-playing');
+    });
   }
   function autoPlay(){
-    if(autoPlays>=LIMIT)return;
-    autoPlays++;
-    play();
+    var withLines=linePlays<LINE_LIMIT;
+    if(withLines)linePlays++;
+    // 文字の小さいリード文は毎回、見出しのポップは上限まで
+    restart(withLines?all:(lead?[lead]:[]),!withLines);
   }
   autoPlay();
-  // クリックは本人の操作なので、回数に関わらず再生する
-  parts.forEach(function(el){el.addEventListener('click',play);});
-  // 一度画面から出て、戻ってきたとき（上限まで）
+  // クリックは本人の操作なので、常に全体を再生する
+  all.forEach(function(el){el.addEventListener('click',function(){restart(all,false);});});
+  // 一度画面から出て、戻ってきたとき
   if('IntersectionObserver' in window){
     var wasOut=false;
     new IntersectionObserver(function(entries){
@@ -151,7 +159,7 @@
         if(!entry.isIntersecting){wasOut=true;return;}
         if(wasOut){wasOut=false;autoPlay();}
       });
-    },{threshold:.6}).observe(parts[0]);
+    },{threshold:.6}).observe(all[0]);
   }
   // 別ページから戻ってきたとき
   addEventListener('pageshow',function(event){if(event.persisted)autoPlay();});
