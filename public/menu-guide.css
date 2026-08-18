@@ -187,3 +187,24 @@
 .mg-course-items ul{grid-template-columns:1fr;gap:9px}
 .mg-course-items li{font-size:14px}
 }
+
+/* ===== ヘッダーの電話案内：固定と携帯を両方見せる ===== */
+.mg-header-call{gap:3px;text-align:left;line-height:1.2}
+.mg-header-call small{color:#c9d2d9}
+.mg-header-call span{font:700 16px Georgia,serif;white-space:nowrap}
+.mg-header-call i{display:inline-block;width:24px;margin-right:7px;color:#e6c98a;font:700 9px sans-serif;font-style:normal;letter-spacing:.06em;vertical-align:2px}
+@media(max-width:1150px){
+.mg-header-call span{font-size:14px}
+.mg-nav{font-size:12px}
+}
+
+/* 戻るボタンの色。.mg-page a{color:inherit} に負けるため優先度を上げる */
+.mg-page a.mg-to-top{color:#f6e4b4}
+.mg-page a.mg-to-top:hover{color:#fff;background:#1b2c3f}
+
+/* 電話ダイアログ：折り返しの案内は大事なので大きく見せる */
+.mg-call-note{font-size:13px}
+.mg-call-note-main{margin-top:20px;padding:15px 16px;border:1px solid #d9b54a52;background:#ffffff0d;color:#f3ead9;font-size:15px;line-height:1.85}
+@media(max-width:900px){
+.mg-call-note-main{padding:13px 14px;font-size:14.5px}
+}
