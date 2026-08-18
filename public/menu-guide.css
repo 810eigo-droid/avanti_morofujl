@@ -275,14 +275,12 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-image-note{position:absolute;top:10px;right:12px;z-index:3;padding:4px 9px;background:#0b1219a6;color:#f0e6d2;font:11px sans-serif;font-style:normal;letter-spacing:.04em;pointer-events:none}
 .mg-placeholder>.mg-image-note{display:none}
 .mg-placeholder.is-loaded>.mg-image-note{display:block}
-.mg-hero-note{top:14px;right:14px;padding:3px 8px;background:#0b121980;color:#efe6d6;font-size:9px}
 .mg-course-note{display:none;top:12px;right:12px}
 .mg-course-photo.is-sub .mg-course-note{display:block}
 
 /* ===== スマホのFV：予約系ボタンは下部固定バーにあるため出さない ===== */
 @media(max-width:900px){
 .mg-image-note{top:7px;right:8px;padding:3px 7px;font-size:10px}
-.mg-hero-note{top:9px;right:9px;font-size:9px}
 .mg-hero-actions a:not(:first-child){display:none}
 }
 
@@ -321,3 +319,27 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-line.is-playing{animation:mg-pop 1s cubic-bezier(.2,.9,.25,1.25) both}
 .mg-hero-line-2.is-playing{animation-delay:.18s}
 @keyframes mg-pop{0%{opacity:0;transform:scale(.82) translateY(16px);filter:blur(6px)}55%{opacity:1;transform:scale(1.035) translateY(0);filter:blur(0)}78%{transform:scale(.99)}100%{opacity:1;transform:scale(1);filter:none}}
+
+/* 本文中から該当タブへ飛ばすリンク */
+.mg-page a.mg-inline-link{color:var(--mg-wine);font-weight:700;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;transition:.2s}
+.mg-page a.mg-inline-link:hover{color:#8f1c33;text-decoration-thickness:2px}
+
+/* ===== スマホ：ヘッダーは追従させず、ハンバーガーだけ固定する =====
+   ロゴ帯が常時72pxを占有するのを避け、画面を広く使うため。 */
+@media(max-width:900px){
+.mg-header{position:static}
+.mg-menu-toggle{position:fixed;top:11px;right:11px;z-index:70;background:#111e2beb;box-shadow:0 4px 14px #0b12194d}
+.mg-nav{position:fixed;top:66px;left:0;right:0;z-index:69}
+.mg-tabs{top:0}
+.mg-menu{scroll-margin-top:0}
+.mg-content-section{scroll-margin-top:0}
+}
+
+/* FV右上の店名表示 */
+.mg-hero-name{position:absolute;z-index:3;top:16px;right:18px;margin:0;color:#f7ecd6;font-size:13px;letter-spacing:.14em;text-shadow:0 2px 10px #0b1219d9,0 0 4px #0b1219a6}
+
+/* スマホ：メニューを開いたらタブ帯ごと覆う */
+@media(max-width:900px){
+.mg-hero-name{top:12px;right:13px;font-size:11.5px;letter-spacing:.08em}
+.mg-nav{top:0;padding-top:64px;background:var(--mg-navy)}
+}

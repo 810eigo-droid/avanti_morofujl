@@ -149,3 +149,12 @@
   // 別ページから戻ってきたとき
   addEventListener('pageshow',function(event){if(event.persisted)play();});
 })();
+(function(){
+  // 本文中のリンクから、該当するメニュータブを開いた状態で飛ばす
+  document.querySelectorAll('[data-mg-tab]').forEach(function(link){
+    link.addEventListener('click',function(){
+      var tab=document.querySelector('.mg-tabs [data-tab="'+link.getAttribute('data-mg-tab')+'"]');
+      if(tab)tab.click();
+    });
+  });
+})();
