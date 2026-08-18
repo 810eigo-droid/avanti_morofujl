@@ -353,3 +353,8 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 @media(max-width:900px){
 .mg-two-col .mg-placeholder{width:100%;min-height:0;aspect-ratio:var(--mg-ratio,16/10)}
 }
+
+/* FVの店名：PCのみ、最初の数秒だけスクロールに追従させる */
+.mg-hero-name{transition:opacity .5s ease}
+.mg-hero-name.is-following{position:fixed;z-index:45;top:110px;right:20px}
+.mg-hero-name.is-fading{opacity:0}

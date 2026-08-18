@@ -174,3 +174,22 @@
     });
   });
 })();
+(function(){
+  // FV右上の店名を、読み込みから5秒間だけ画面に追従させる（PCのみ）
+  var name=document.querySelector('.mg-hero-name');
+  if(!name)return;
+  if(!matchMedia('(min-width:901px)').matches)return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  name.classList.add('is-following');
+  function release(){name.classList.remove('is-following','is-fading');}
+  setTimeout(function(){
+    // 画面が動いていなければ位置が変わらないのでそのまま解除、
+    // スクロール済みなら一度そっと消してから元の位置へ戻す
+    if(scrollY>40){
+      name.classList.add('is-fading');
+      setTimeout(release,500);
+    }else{
+      release();
+    }
+  },5000);
+})();
