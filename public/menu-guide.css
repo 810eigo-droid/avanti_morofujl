@@ -33,3 +33,59 @@
 .mg-tag{margin-left:6px}
 }
 .mg-drink-intro{margin-bottom:32px}
+
+/* ===== ヒーロー：ボタン3つ ＋ 金色バッジ（旧トップページのデザインを移植） ===== */
+.mg-hero-actions{flex-wrap:wrap}
+.mg-hero-actions a{position:relative;overflow:hidden;isolation:isolate;transition:.2s}
+.mg-hero-actions a:not(:first-child){background:#111e2bd9;border-color:#e6cf93}
+.mg-hero-actions a:after{content:"";position:absolute;z-index:-1;top:-120%;left:-45%;width:28%;height:340%;transform:rotate(24deg);background:linear-gradient(90deg,transparent,#fff9,transparent);transition:left .7s ease}
+.mg-hero-actions a:hover:after{left:125%}
+.mg-hero-facts{right:4vw;left:auto;bottom:20px;gap:6px;background:none;color:#241914;box-shadow:none}
+.mg-hero-facts div{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;width:190px;min-height:92px;padding:12px 16px;overflow:hidden;border:1px solid #8c682c;background:linear-gradient(145deg,rgba(249,221,145,.97),rgba(205,160,73,.96));box-shadow:inset 0 0 0 3px #f9e3a566,0 10px 24px #160d0b32;text-align:center;animation:mg-badge-float 4.8s ease-in-out infinite}
+.mg-hero-facts div:after{content:"";position:absolute;inset:6px;border:1px solid #72501e55;pointer-events:none}
+.mg-hero-facts div:before{content:"";position:absolute;z-index:2;inset:-80% -35%;transform:translateX(-70%) rotate(20deg);background:linear-gradient(90deg,transparent,#fff8,transparent);animation:mg-badge-shine 6s ease-in-out infinite;pointer-events:none}
+.mg-hero-facts div:nth-child(2){animation-delay:-1.6s}
+.mg-hero-facts div:nth-child(3){animation-delay:-3.2s}
+.mg-hero-facts div:nth-child(2):before{animation-delay:1.2s}
+.mg-hero-facts div:nth-child(3):before{animation-delay:2.4s}
+.mg-hero-facts strong{display:block;margin:0 0 5px;color:#664a28;font:11px Arial,sans-serif;letter-spacing:.15em}
+.mg-hero-facts span{display:block;min-width:0;padding:0;border:0;font-size:20px;line-height:1.2;white-space:nowrap}
+@keyframes mg-badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes mg-badge-shine{0%,64%{transform:translateX(-70%) rotate(20deg)}84%,100%{transform:translateX(80%) rotate(20deg)}}
+
+/* ===== 電話番号の選択ダイアログ ===== */
+.mg-call-modal[hidden]{display:none}
+.mg-call-modal{position:fixed;z-index:100;inset:0;display:flex;align-items:center;justify-content:center;padding:20px}
+.mg-call-backdrop{position:absolute;inset:0;background:#0b1219cc;backdrop-filter:blur(3px)}
+.mg-call-box{position:relative;width:100%;max-width:430px;padding:34px 30px 28px;border:1px solid #d9b54a;background:var(--mg-navy);color:#fff;box-shadow:0 24px 60px #00000059;text-align:center}
+.mg-call-close{position:absolute;top:8px;right:10px;width:38px;height:38px;border:0;background:none;color:#cbd3d9;font-size:24px;line-height:1;cursor:pointer}
+.mg-call-close:hover{color:#fff}
+.mg-call-kicker{color:#b5892f;font:700 10px Arial,sans-serif;letter-spacing:.3em}
+.mg-call-box h2{margin:12px 0 6px;font-size:23px;font-weight:400}
+.mg-call-lead{margin:0 0 20px;color:#b9c1c7;font-size:13px}
+.mg-call-option{display:grid;gap:3px;margin-bottom:12px;padding:15px 12px;border:1px solid #d9b54a;background:#ffffff0a;transition:.2s}
+.mg-call-option:hover{background:var(--mg-gold);color:#17202b}
+.mg-call-option small{color:#c8d0d6;font:11px sans-serif;letter-spacing:.1em}
+.mg-call-option:hover small{color:#4a3a17}
+.mg-call-option strong{font:700 25px Georgia,serif;letter-spacing:.02em}
+.mg-call-note{margin:14px 0 0;color:#9fabb5;font-size:12px;line-height:1.8;text-align:left}
+@media(prefers-reduced-motion:reduce){
+.mg-hero-facts div,.mg-hero-facts div:before{animation:none}
+}
+@media(max-width:900px){
+.mg-hero-actions{gap:10px}
+.mg-hero-actions a{padding:14px 16px}
+.mg-hero-facts{right:0;left:0;bottom:10px;gap:4px;margin:0 10px}
+.mg-hero-facts div{width:auto;flex:1;min-height:66px;padding:8px 3px;box-shadow:inset 0 0 0 2px #f9e3a566,0 7px 16px #160d0b29}
+.mg-hero-facts div:after{inset:4px}
+.mg-hero-facts strong{margin:0 0 3px;font-size:9px;letter-spacing:.04em}
+.mg-hero-facts span{font-size:14px}
+.mg-call-box{padding:30px 20px 24px}
+.mg-call-option strong{font-size:22px}
+}
+
+/* スマホ：金色バッジが下部固定CTAバーに隠れないよう持ち上げる */
+@media(max-width:900px){
+.mg-hero-facts{bottom:58px}
+.mg-call-box h2{font-size:20px}
+}

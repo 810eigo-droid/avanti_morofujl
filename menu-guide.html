@@ -50,11 +50,11 @@
           </h1>
           <div class="mg-hero-lead">イタリアで修業した店主の南欧料理と、<br/>自分の好みを探せるグラスワイン。</div>
           <div class="mg-hero-actions">
-            <a href="#menu">メニュー・価格を見る</a><a href="tel:0942313360">電話で予約する</a>
+            <a href="#menu">メニュー・価格を見る</a><a href="tel:0942313360">電話で予約する</a><a href="https://tabelog.com/fukuoka/A4008/A400801/40036124/" target="_blank" rel="noreferrer">ネット予約・空席確認</a>
           </div>
         </div>
         <div class="mg-hero-facts">
-          <span>西鉄久留米駅から<strong>徒歩4分</strong></span><span>グラスワイン<strong>常時6種類</strong></span><span>お席<strong>17席</strong></span>
+          <div><strong>西鉄久留米駅から</strong><span>徒歩4分</span></div><div><strong>グラスワイン</strong><span>常時6種類</span></div><div><strong>お席</strong><span>17席</span></div>
         </div>
       </section>
       <section class="mg-gallery" aria-labelledby="mg-gallery-title">
@@ -205,11 +205,10 @@
             <li>
               <b>長崎県産 ヤリイカと季節野菜のオイルソーススパゲティ（カラスミがけ）</b><strong>1,680円</strong>
             </li>
-            <!-- 料理名が未確定のため非表示にしています。確定したら下の1行を上の <li> と同じ形で出してください。
+            <!-- 料理名は店主への確認待ち。確定したら下の <b> を書き換えてください。 -->
             <li>
               <b>千葉県産「白いキクラゲ」の有機バジル和え</b><strong>980円</strong>
             </li>
-            -->
           </ul>
         </div>
 
@@ -849,6 +848,26 @@
         <a href="tel:0942313360">電話で予約</a><a href="#menu">メニュー・価格</a>
       </div>
       <a class="mg-to-top" href="#top" aria-label="ページ上部へ戻る">↑</a>
+
+      <!-- ===== 電話番号の選択ダイアログ =====
+           ページ内のすべての tel: リンクを押すと、このダイアログが開きます。 -->
+      <div class="mg-call-modal" id="mg-call" hidden>
+        <div class="mg-call-backdrop" data-mg-call-close></div>
+        <div class="mg-call-box" role="dialog" aria-modal="true" aria-labelledby="mg-call-title">
+          <button class="mg-call-close" type="button" data-mg-call-close aria-label="閉じる">×</button>
+          <span class="mg-call-kicker">RESERVATION</span>
+          <h2 id="mg-call-title">お電話でのご予約・お問い合わせ</h2>
+          <p class="mg-call-lead">つながりやすい方へおかけください。</p>
+          <a class="mg-call-option" href="tel:0942313360">
+            <small>店舗（固定電話）</small><strong>0942-31-3360</strong>
+          </a>
+          <a class="mg-call-option" href="tel:09073973279">
+            <small>携帯電話</small><strong>090-7397-3279</strong>
+          </a>
+          <p class="mg-call-note">仕込みや調理中で、お電話に出られないことがあります。留守番電話にメッセージを残していただければ、こちらから折り返しご連絡いたします。</p>
+          <p class="mg-call-note">営業時間：月〜木 18:00–22:30 ／ 金・土・祝 18:00–23:00（日曜定休）</p>
+        </div>
+      </div>
       <script src="/avanti_morofujl/public/menu-guide.js" defer="">
       </script>
     </main>
