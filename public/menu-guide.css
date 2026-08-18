@@ -208,3 +208,29 @@
 @media(max-width:900px){
 .mg-call-note-main{padding:13px 14px;font-size:14.5px}
 }
+
+/* ワイン紹介：グラス1杯の価格を添える */
+.mg-number-feature{flex-wrap:wrap}
+.mg-number-price{margin-left:auto;padding:11px 18px;border:1px solid var(--mg-wine);color:var(--mg-wine);font:700 26px Georgia,serif;white-space:nowrap;text-align:center}
+.mg-number-price i{display:block;color:#6d625a;font:700 10px sans-serif;font-style:normal;letter-spacing:.14em}
+.mg-number-price em{font-size:12px;font-style:normal}
+@media(max-width:900px){
+.mg-number-price{margin:14px 0 0;width:100%;font-size:23px}
+}
+
+/* 2カラムの見出し：桁あふれで1〜2文字だけ次行に落ちるのを防ぐ */
+.mg-two-col h2{font-size:clamp(27px,3vw,42px);text-wrap:balance}
+
+/* おすすめコース：写真送りの矢印 */
+.mg-course-slider{cursor:pointer}
+.mg-course-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid #f0dca8;border-radius:50%;background:#0b1219a6;color:#f6e4b4;cursor:pointer;transition:.2s}
+.mg-course-arrow:hover{background:#0b1219e0;color:#fff}
+.mg-course-arrow svg{display:block;width:17px;height:17px}
+.mg-course-prev{left:12px}
+.mg-course-next{right:12px}
+@media(max-width:900px){
+.mg-course-arrow{width:34px;height:34px}
+.mg-course-arrow svg{width:15px;height:15px}
+.mg-course-prev{left:8px}
+.mg-course-next{right:8px}
+}
