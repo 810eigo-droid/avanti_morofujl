@@ -129,26 +129,34 @@
   // FVの見出し2行と、その下のリード文をまとめて演出する
   var parts=Array.prototype.slice.call(document.querySelectorAll('.mg-hero-line,.mg-hero-burst'));
   if(!parts.length)return;
+  var autoPlays=0,LIMIT=2;   // 自動再生は読み込み時と1回戻ったときの計2回まで
   function play(){
     parts.forEach(function(el){el.classList.remove('is-playing');});
     void document.body.offsetWidth;      // アニメーションを頭から再生し直すためのリセット
     parts.forEach(function(el){el.classList.add('is-playing');});
   }
-  play();
+  function autoPlay(){
+    if(autoPlays>=LIMIT)return;
+    autoPlays++;
+    play();
+  }
+  autoPlay();
+  // クリックは本人の操作なので、回数に関わらず再生する
   parts.forEach(function(el){el.addEventListener('click',play);});
-  // 一度画面から出て、戻ってきたときにもう一度
+  // 一度画面から出て、戻ってきたとき（上限まで）
   if('IntersectionObserver' in window){
     var wasOut=false;
     new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(!entry.isIntersecting){wasOut=true;return;}
-        if(wasOut){wasOut=false;play();}
+        if(wasOut){wasOut=false;autoPlay();}
       });
     },{threshold:.6}).observe(parts[0]);
   }
   // 別ページから戻ってきたとき
-  addEventListener('pageshow',function(event){if(event.persisted)play();});
+  addEventListener('pageshow',function(event){if(event.persisted)autoPlay();});
 })();
+
 (function(){
   // 本文中のリンクから、該当するメニュータブを開いた状態で飛ばす
   document.querySelectorAll('[data-mg-tab]').forEach(function(link){
