@@ -193,10 +193,33 @@
           <h2>メニュー・価格</h2>
           <p>気になる料理と価格を、こちらからご覧いただけます。</p>
         </div>
+
+        <!-- ===== 季節のおすすめ =====
+             入れ替え頻度が高い枠です。この <li> を書き換えるだけで更新できます。 -->
+        <div class="mg-seasonal">
+          <span class="mg-seasonal-label">今季のおすすめ</span>
+          <ul>
+            <li>
+              <b>山形県産 桃とモッツァレラチーズのカプレーゼ</b><strong>980円</strong>
+            </li>
+            <li>
+              <b>長崎県産 ヤリイカと季節野菜のオイルソーススパゲティ（カラスミがけ）</b><strong>1,680円</strong>
+            </li>
+            <!-- 料理名が未確定のため非表示にしています。確定したら下の1行を上の <li> と同じ形で出してください。
+            <li>
+              <b>千葉県産「白いキクラゲ」の有機バジル和え</b><strong>980円</strong>
+            </li>
+            -->
+          </ul>
+        </div>
+
+        <p class="mg-tax-note">料理・ドリンクの表示価格はすべて<strong>税別</strong>です。別途10%の消費税を申し受けます。（コース料金のみ税込表示）</p>
+
         <div class="mg-tabs" role="tablist" aria-label="メニューカテゴリー">
           <button role="tab" aria-selected="true" data-tab="course">おすすめコース</button>
-          <button role="tab" aria-selected="false" data-tab="small">前菜・小皿</button>
-          <button role="tab" aria-selected="false" data-tab="main">パスタ・メイン</button>
+          <button role="tab" aria-selected="false" data-tab="small">前菜・小皿・ピッツァ</button>
+          <button role="tab" aria-selected="false" data-tab="pasta">パスタ・リゾット</button>
+          <button role="tab" aria-selected="false" data-tab="meat">肉料理・デザート</button>
           <button role="tab" aria-selected="false" data-tab="drink">ワイン・ドリンク</button>
         </div>
         <div class="mg-panels">
@@ -231,61 +254,450 @@
             </article>
           </section>
           <section class="mg-panel" data-panel="small">
-            <div class="mg-menu-list">
+            <div class="mg-menu-group">
+              <h3>前菜3種盛り</h3>
+              <div class="mg-menu-list">
               <article>
                 <div>
-                  <b>辛いサラミが入った砂肝のアヒージョ</b>
-                  <p>店主おすすめ。正式メニュー表の価格を追加予定です。</p>
+                  <b>前菜3種盛り</b>
+                  <p>鮮魚のカルパッチョ、トリュフ風味のポークリエット、フランス産生ハム＆サラミなど。内容は変更する場合があります。</p>
                 </div>
-                <strong>価格追加予定</strong>
+                <strong class="mg-price-set">
+                  <span><small>2名様用</small>1,680円</span>
+                  <span><small>3名様用</small>2,300円</span>
+                  <span><small>4名様用</small>3,160円</span>
+                  <span><small>5名様用</small>3,900円</span>
+                </strong>
               </article>
-              <article class="mg-data-slot">
+              <article>
                 <div>
-                  <b>正式な前菜・小皿メニュー</b>
-                  <p>料理名と価格をここへ追加します。</p>
+                  <b>お一人様用 3種盛り</b>
                 </div>
-                <strong>¥ ---</strong>
+                <strong>890円</strong>
               </article>
+              </div>
+              <p class="mg-menu-note">※6名様以上でも承ります。お気軽にお申し付けください。</p>
+            </div>
+            <div class="mg-menu-group">
+              <h3>ワインのあて・タパス</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>燻製ミックスナッツ</b>
+                </div>
+                <strong>450円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>自家製ピクルス</b>
+                </div>
+                <strong>550円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>ドライフルーツ3種盛り</b>
+                </div>
+                <strong>550円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>南欧種付きオリーブ3種盛り</b>
+                </div>
+                <strong>630円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>カポナータとサツマイモのキッシュ</b>
+                </div>
+                <strong>680円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>トリュフ風味のポークリエット</b>
+                  <p>薄切りパン付き</p>
+                </div>
+                <strong>750円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>黒トリュフ ポテトチップス</b>
+                  <p>スペイン産</p>
+                </div>
+                <strong>780円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>鹿肉のソーセージ（4本）</b>
+                </div>
+                <strong>850円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>トリッパ</b>
+                  <p>牛の胃袋のトマト煮込み</p>
+                </div>
+                <strong>980円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>オリーブの肉詰めフライ</b>
+                  <p>数量限定</p>
+                </div>
+                <strong>980円</strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>本日の鮮魚のカルパッチョ</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>本日の鮮魚のカルパッチョ</b>
+                  <p>魚の種類や量により内容が変わります。</p>
+                </div>
+                <strong class="mg-price-set">
+                  <span><small>小 / 約2〜3名様</small>950円</span>
+                  <span><small>大 / 約4〜5名様</small>1,800円</span>
+                </strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>生ハム・サラミ・チーズ</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>生ハム＆サラミ3種盛り</b>
+                </div>
+                <strong class="mg-price-set">
+                  <span><small>小</small>830円</span>
+                  <span><small>レギュラー / 約3〜4名様</small>1,480円</span>
+                </strong>
+              </article>
+              <article>
+                <div>
+                  <b>南欧チーズ3種盛り</b>
+                </div>
+                <strong class="mg-price-set">
+                  <span><small>小</small>730円</span>
+                  <span><small>レギュラー / 約3〜4名様</small>980円</span>
+                </strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>サラダ</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>シンプルな季節野菜のサラダ <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong class="mg-price-set">
+                  <span><small>小</small>730円</span>
+                  <span><small>レギュラー</small>930円</span>
+                </strong>
+              </article>
+              <article>
+                <div>
+                  <b>アボカドと彩り野菜のサラダ</b>
+                  <p>アボカドの状態により欠品の場合があります。</p>
+                </div>
+                <strong>1,100円</strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>アヒージョ</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>マッシュルーム・エリンギ・ジャガイモのアヒージョ</b>
+                </div>
+                <strong>730円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>エビとジャガイモのアヒージョ</b>
+                </div>
+                <strong>780円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>タコとジャガイモのアヒージョ</b>
+                </div>
+                <strong>880円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>伊産ピリ辛サラミ入り 砂肝のアヒージョ <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong>890円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>薄切りパン 6枚</b>
+                  <p>アヒージョと一緒にどうぞ。</p>
+                </div>
+                <strong>150円</strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>ナポリ風ピッツァ</h3>
+              <p class="mg-menu-note mg-menu-note-intro">直径約20cm／イタリア＆オランダ産チーズ使用</p>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>ホエー豚ベーコン・オニオン・モッツァレラチーズ</b>
+                </div>
+                <strong>1,190円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>イタリア辛いサラミ＆3種のチーズ＆トマトソース</b>
+                </div>
+                <strong>1,350円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>クアトロ・フォルマッジョ <span class="mg-tag">人気メニュー</span></b>
+                  <p>4種の南欧チーズ</p>
+                </div>
+                <strong>1,430円</strong>
+              </article>
+              </div>
+              <p class="mg-menu-note">※テイクアウトも承ります。混雑時は対応できない場合があります。</p>
             </div>
           </section>
-          <section class="mg-panel" data-panel="main">
-            <div class="mg-menu-list">
+          <section class="mg-panel" data-panel="pasta">
+            <div class="mg-menu-group">
+              <h3>パスタ</h3>
+              <p class="mg-menu-note mg-menu-note-intro">ベーコンはホエー豚を使用しています</p>
+              <div class="mg-menu-list">
               <article>
                 <div>
-                  <b>カーチョ・エ・ペペ</b>
-                  <p>店主おすすめ</p>
+                  <b>ホエー豚ベーコンと季節野菜のオイルソーススパゲティ</b>
                 </div>
-                <strong>価格追加予定</strong>
+                <strong>1,280円</strong>
               </article>
               <article>
                 <div>
-                  <b>ヤリイカと季節野菜のスパゲティ</b>
-                  <p>店主おすすめ</p>
+                  <b>ホエー豚ベーコンと季節野菜のトマトソーススパゲティ</b>
                 </div>
-                <strong>価格追加予定</strong>
+                <strong>1,380円</strong>
               </article>
               <article>
                 <div>
-                  <b>ピスタチオソースのスパゲティ</b>
-                  <p>店主おすすめ</p>
+                  <b>アバンティ カーチョ・エ・ペペ <span class="mg-tag">人気メニュー</span></b>
+                  <p>ホエー豚ベーコン、イタリア産羊チーズ、ブラックペッパー、ガーリック。1.5倍・2倍でも同価格です。なお、カーチョ・エ・ペペのみのご注文はご遠慮ください。</p>
                 </div>
-                <strong>価格追加予定</strong>
+                <strong>1,250円</strong>
               </article>
+              <article>
+                <div>
+                  <b>国産牛100％のミートソーススパゲティ</b>
+                </div>
+                <strong>1,350円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>イタリア産辛いサラミ入り ペンネアラビアータ <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong>1,580円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>4種の南欧チーズソースの生パスタ</b>
+                </div>
+                <strong>1,580円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>伊産ベーコンと野菜のピスタチオクリームソーススパゲティ <span class="mg-tag">女性に人気</span></b>
+                </div>
+                <strong>1,680円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>スペイン産ポルチーニ茸とマッシュルーム入り トリュフ風味のクリームソーススパゲティ <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong>1,780円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>ズワイガニのトマトクリームソーススパゲティ <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong>1,890円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>本日のスパゲティ</b>
+                  <p>内容と価格はその日により変わります。</p>
+                </div>
+                <strong>店内にてご案内</strong>
+              </article>
+              </div>
+              <p class="mg-menu-note">※＋500円で大盛りに変更できます。対象メニューはスタッフへお尋ねください。</p>
+            </div>
+            <div class="mg-menu-group">
+              <h3>リゾット</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>南欧産4種のチーズリゾット</b>
+                </div>
+                <strong>1,680円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>ヤリイカ入り スペイン産イカ墨ソースリゾット</b>
+                </div>
+                <strong>1,780円</strong>
+              </article>
+              </div>
+              <p class="mg-menu-note">※いずれも米150gと、少し多めの量でご提供します。</p>
+            </div>
+          </section>
+          <section class="mg-panel" data-panel="meat">
+            <div class="mg-menu-group">
+              <h3>肉料理</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>国産若鶏もも肉のグリル アバンティ風</b>
+                  <p>約150〜170g</p>
+                </div>
+                <strong>930円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>国産豚肩ロース肉の野菜＆スパイス煮込み <span class="mg-tag">人気メニュー</span></b>
+                </div>
+                <strong>1,800円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>オーストラリア産 骨付きラム肉のグリル</b>
+                  <p>入荷時のみの販売です。通常2本で170〜250g程度（例：2本200gで約3,800円）。価格・重量はスタッフへお尋ねください。</p>
+                </div>
+                <strong>時価</strong>
+              </article>
+              <article>
+                <div>
+                  <b>南九州牛のステーキ（ランプ）</b>
+                  <p>イタリア仕込みの赤ワインソース。通常110〜140g前後でご提供します。重量はスタッフへお尋ねください。</p>
+                </div>
+                <strong class="mg-price-set">
+                  <span><small>100gあたり</small>3,200円</span>
+                </strong>
+              </article>
+              </div>
+              <p class="mg-menu-note">※肉料理は調理にお時間をいただきます。</p>
+              <p class="mg-menu-note">※混雑時、お急ぎの場合は牛ステーキ・ラム肉のご注文をご遠慮いただく場合があります。</p>
+            </div>
+            <div class="mg-menu-group">
+              <h3>デザート</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>くるみ＆ドライフルーツのチョコレート</b>
+                </div>
+                <strong>500円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>ナッツ＆クッキー入りセミフレッド</b>
+                </div>
+                <strong>580円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>アバンティのガトーショコラ バニラアイス添え</b>
+                </div>
+                <strong>600円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>アフォガート</b>
+                  <p>バニラアイスのエスプレッソがけ</p>
+                </div>
+                <strong>600円</strong>
+              </article>
+              </div>
             </div>
           </section>
           <section class="mg-panel" data-panel="drink">
             <div class="mg-drink-intro">
               <b>グラスワインは常時6種類</b>
-              <p>正式なワイン・ドリンク名と価格を追加予定です。</p>
+              <p>スパークリング1種、白3種、赤2種をご用意しています。料理に合わせて、少しずつ試しながらお好みの一杯を探してみてください。</p>
             </div>
-            <div class="mg-menu-list">
-              <article class="mg-data-slot">
+            <div class="mg-menu-group">
+              <h3>スパークリング</h3>
+              <div class="mg-menu-list">
+              <article>
                 <div>
-                  <b>グラスワイン・ドリンク</b>
-                  <p>正式メニュー表の内容をここへ追加します。</p>
+                  <b>スペイン ／ カヴァ</b>
                 </div>
-                <strong>¥ ---</strong>
+                <strong>650円</strong>
               </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>白ワイン</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>スペイン ／ ヴェルデッホ</b>
+                  <p>オーガニック・爽やかなタイプ</p>
+                </div>
+                <strong>600円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>モルドバ ／ リースリング</b>
+                  <p>フレッシュで心地よいタイプ</p>
+                </div>
+                <strong>700円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>フランス ／ シャルドネ</b>
+                  <p>コクのある辛口</p>
+                </div>
+                <strong>750円</strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>赤ワイン</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>スペイン ／ テンプラニーリョ</b>
+                  <p>ミディアムタイプ</p>
+                </div>
+                <strong>650円</strong>
+              </article>
+              <article>
+                <div>
+                  <b>オーストラリア ／ カベルネ・ソーヴィニヨン</b>
+                  <p>フルボディ・辛口</p>
+                </div>
+                <strong>750円</strong>
+              </article>
+              </div>
+            </div>
+            <div class="mg-menu-group">
+              <h3>サングリア</h3>
+              <div class="mg-menu-list">
+              <article>
+                <div>
+                  <b>自家製サングリア（赤）</b>
+                  <p>内容はスタッフへお尋ねください。</p>
+                </div>
+                <strong>650円</strong>
+              </article>
+              </div>
             </div>
           </section>
         </div>
