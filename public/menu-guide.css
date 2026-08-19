@@ -477,3 +477,9 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-voice{background-attachment:scroll}
 .mg-section-head .mg-voice-note{font-size:11.5px;margin-top:13px!important}
 }
+
+/* ===== アクセス：地図の上の写真 ===== */
+.mg-map-photo{width:100%;min-height:0;padding:0;aspect-ratio:16/9;max-height:430px;margin-bottom:18px}
+@media(max-width:900px){
+.mg-map-photo{max-height:none;margin-bottom:14px}
+}
