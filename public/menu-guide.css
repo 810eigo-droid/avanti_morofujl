@@ -143,7 +143,7 @@
 }
 
 /* ===== 戻るボタンの矢印（明朝体には↑の字形が無い端末があるため図形で描く） ===== */
-.mg-to-top svg{display:block;width:18px;height:18px}
+.mg-to-top svg{width:18px;height:18px;display:block;width:18px;height:18px}
 
 @media(max-width:900px){
 /* ===== スマホ：ヘッダーは流し、ハンバーガーだけ固定して縦の余白を稼ぐ ===== */
@@ -193,7 +193,8 @@
 .mg-header-call small{color:#c9d2d9}
 .mg-header-call span{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 17px;border:1px solid #e6cf93;color:#f6e4b4;font:700 14px sans-serif;letter-spacing:.06em;white-space:nowrap;transition:.2s}
 .mg-header-call:hover span{background:var(--mg-gold);border-color:var(--mg-gold);color:#17202b}
-.mg-header-call svg{flex:none;width:15px;height:15px}
+.mg-header-call svg{flex:none;width:16px;height:16px}
+.mg-header-call{max-width:230px}
 @media(max-width:1150px){
 .mg-header-call span{padding:8px 13px;font-size:13px}
 .mg-nav{font-size:12px}
