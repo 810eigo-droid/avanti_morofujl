@@ -189,12 +189,13 @@
 }
 
 /* ===== ヘッダーの電話案内：固定と携帯を両方見せる ===== */
-.mg-header-call{gap:3px;text-align:left;line-height:1.2}
+.mg-header-call{gap:7px;text-align:center;line-height:1.2}
 .mg-header-call small{color:#c9d2d9}
-.mg-header-call span{font:700 16px Georgia,serif;white-space:nowrap}
-.mg-header-call i{display:inline-block;width:24px;margin-right:7px;color:#e6c98a;font:700 9px sans-serif;font-style:normal;letter-spacing:.06em;vertical-align:2px}
+.mg-header-call span{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 17px;border:1px solid #e6cf93;color:#f6e4b4;font:700 14px sans-serif;letter-spacing:.06em;white-space:nowrap;transition:.2s}
+.mg-header-call:hover span{background:var(--mg-gold);border-color:var(--mg-gold);color:#17202b}
+.mg-header-call svg{flex:none;width:15px;height:15px}
 @media(max-width:1150px){
-.mg-header-call span{font-size:14px}
+.mg-header-call span{padding:8px 13px;font-size:13px}
 .mg-nav{font-size:12px}
 }
 
