@@ -175,10 +175,9 @@
   });
 })();
 (function(){
-  // FV右上の店名を、読み込みから5秒間だけ画面に追従させる（PCのみ）
+  // FV右上の店名を、読み込みから5秒間だけ画面に追従させる
   var name=document.querySelector('.mg-hero-name');
   if(!name)return;
-  if(!matchMedia('(min-width:901px)').matches)return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   name.classList.add('is-following');
   function release(){name.classList.remove('is-following','is-fading');}
