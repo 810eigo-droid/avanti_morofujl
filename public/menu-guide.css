@@ -189,9 +189,8 @@
 }
 
 /* ===== ヘッダーの電話案内：固定と携帯を両方見せる ===== */
-.mg-header-call{gap:7px;text-align:center;line-height:1.2}
-.mg-header-call small{color:#c9d2d9}
-.mg-header-call span{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 17px;border:1px solid #e6cf93;color:#f6e4b4;font:700 14px sans-serif;letter-spacing:.06em;white-space:nowrap;transition:.2s}
+.mg-header-call{line-height:1.2}
+.mg-header-call span{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 17px;border:1px solid #e6cf93;background:#1b2c3f;color:#f6e4b4;font:700 14px sans-serif;letter-spacing:.06em;white-space:nowrap;transition:.2s}
 .mg-header-call:hover span{background:var(--mg-gold);border-color:var(--mg-gold);color:#17202b}
 .mg-header-call svg{flex:none;width:16px;height:16px}
 .mg-header-call{max-width:230px}
@@ -371,4 +370,14 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-hero-name.has-logo .mg-hero-name-text{display:none}
 @media(max-width:900px){
 .mg-hero-logo{width:132px}
+}
+
+/* ヘッダーが狭いときに項目名が途中で折り返すのを防ぐ */
+.mg-nav a{white-space:nowrap}
+@media(max-width:1080px){
+.mg-header{gap:18px;padding:0 20px}
+.mg-brand img{width:122px;height:56px}
+.mg-nav{gap:15px;font-size:11.5px}
+.mg-header-call span{padding:7px 12px;font-size:12px;gap:6px}
+.mg-header-call svg{width:14px;height:14px}
 }
