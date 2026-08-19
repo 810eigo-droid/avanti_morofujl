@@ -1,3 +1,11 @@
+/* ?still=1 を付けて開くと、動きを止めて全要素を表示した状態にする（全画面キャプチャ用） */
+var MG_STILL=/[?&]still/i.test(location.search);
+if(MG_STILL){
+  document.documentElement.classList.add('mg-still');
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('iframe[loading="lazy"],img[loading="lazy"]').forEach(function(el){el.loading='eager';});
+  });
+}
 (function(){
   var imageBase=location.hostname.indexOf('github.io')>-1?'/avanti_morofujl/public/images/':'/images/';
   if(location.hostname.indexOf('github.io')>-1){var mobileHero=document.querySelector('.mg-hero source');if(mobileHero)mobileHero.setAttribute('srcset',imageBase+'hero-main-sp.webp');var finalCta=document.querySelector('.mg-final');if(finalCta){var applyFinalBg=function(){finalCta.style.backgroundImage=matchMedia('(max-width:700px)').matches?'url("'+imageBase+'footer-bg-sp.webp")':'linear-gradient(#6411242e,#6411242e),url("'+imageBase+'footer-bg.webp")';};applyFinalBg();addEventListener('resize',applyFinalBg);}}
@@ -178,6 +186,7 @@
   // FV右上の店名を、読み込みから5秒間だけ画面に追従させる
   var name=document.querySelector('.mg-hero-name');
   if(!name)return;
+  if(MG_STILL)return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   name.classList.add('is-following');
   function release(){name.classList.remove('is-following','is-fading');}
@@ -243,6 +252,7 @@
 })();
 (function(){
   // スクロールに合わせて各セクションを登場させる
+  if(MG_STILL)return;
   if(!('IntersectionObserver' in window))return;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   document.documentElement.classList.add('mg-motion');

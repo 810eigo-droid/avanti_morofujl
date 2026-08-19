@@ -483,3 +483,15 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 @media(max-width:900px){
 .mg-map-photo{max-height:none;margin-bottom:14px}
 }
+
+/* ===== ?still=1：全画面キャプチャ用（動きを止め、追従要素を固定解除） ===== */
+html.mg-still *,html.mg-still *:before,html.mg-still *:after{animation:none!important;transition:none!important}
+html.mg-still .mg-reveal{opacity:1!important;transform:none!important}
+html.mg-still .mg-header,html.mg-still .mg-tabs-wrap,html.mg-still .mg-mobile-cta{position:static!important}
+html.mg-still .mg-hero-name{position:absolute!important}
+html.mg-still .mg-to-top{display:none!important}
+/* 固定背景は全画面キャプチャで1画面分しか描かれないため、通常のスクロール背景に戻す */
+html.mg-still *{background-attachment:scroll!important}
+html.mg-still .mg-tabs-hint{display:none!important}
+/* 未設置の画像枠はキャプチャに写さない */
+html.mg-still .mg-placeholder:not(.is-loaded){display:none!important}
