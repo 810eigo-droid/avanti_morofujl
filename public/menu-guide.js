@@ -203,3 +203,11 @@
   logo.addEventListener('error',function(){logo.remove();});
   if(logo.complete&&logo.naturalWidth)logo.dispatchEvent(new Event('load'));
 })();
+(function(){
+  // スマホでは外部リンクを同じタブで開く。
+  // 新しいタブだと履歴が無く、戻るボタンでページへ帰れないため
+  if(!matchMedia('(max-width:900px)').matches)return;
+  document.querySelectorAll('a[target="_blank"]').forEach(function(link){
+    link.removeAttribute('target');
+  });
+})();
