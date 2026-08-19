@@ -211,3 +211,33 @@
     link.removeAttribute('target');
   });
 })();
+(function(){
+  // タブが横に動かせることを伝える（スマホのみ）
+  var wrap=document.querySelector('.mg-tabs-wrap'),tabs=wrap&&wrap.querySelector('.mg-tabs');
+  if(!wrap||!tabs)return;
+  if(!matchMedia('(max-width:900px)').matches)return;
+
+  function update(){
+    // 右端まで送りきったら、ぼかしと矢印を消す
+    var atEnd=tabs.scrollLeft+tabs.clientWidth>=tabs.scrollWidth-4;
+    wrap.classList.toggle('is-end',atEnd||tabs.scrollWidth<=tabs.clientWidth+4);
+  }
+  tabs.addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update);
+  update();
+
+  // メニュー欄が最初に画面へ入ったとき、一度だけ軽く動かして見せる
+  if(!('IntersectionObserver' in window))return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var done=false;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting||done)return;
+      done=true;
+      io.disconnect();
+      tabs.classList.add('is-nudging');
+      setTimeout(function(){tabs.classList.remove('is-nudging');},1200);
+    });
+  },{threshold:.9});
+  io.observe(wrap);
+})();
