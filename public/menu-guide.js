@@ -193,3 +193,14 @@
     }
   },5000);
 })();
+(function(){
+  // FV右上のロゴ画像。読み込めたら文字表示と差し替える
+  var name=document.querySelector('.mg-hero-name'),logo=name&&name.querySelector('.mg-hero-logo');
+  if(!logo)return;
+  logo.addEventListener('load',function(){
+    logo.hidden=false;
+    name.classList.add('has-logo');
+  });
+  logo.addEventListener('error',function(){logo.remove();});
+  if(logo.complete&&logo.naturalWidth)logo.dispatchEvent(new Event('load'));
+})();
