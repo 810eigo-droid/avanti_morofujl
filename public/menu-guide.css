@@ -381,3 +381,11 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 .mg-header-call span{padding:7px 12px;font-size:12px;gap:6px}
 .mg-header-call svg{width:14px;height:14px}
 }
+
+/* ナビから飛んできたときに、お支払いの行が分かるようにする */
+#payment{scroll-margin-top:100px}
+#payment:target{animation:mg-target 2.4s ease-out}
+@keyframes mg-target{0%,55%{background:#d9b54a2e;box-shadow:0 0 0 10px #d9b54a2e}100%{background:transparent;box-shadow:none}}
+@media(max-width:900px){
+#payment{scroll-margin-top:14px}
+}
