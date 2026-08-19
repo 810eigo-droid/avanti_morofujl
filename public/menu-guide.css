@@ -343,6 +343,7 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 /* スマホ：メニューを開いたらタブ帯ごと覆う */
 @media(max-width:900px){
 .mg-hero-name{top:15px;right:14px;gap:9px;font-size:14px;letter-spacing:.06em}
+
 .mg-hero-name:before{width:22px}
 .mg-nav{top:0;padding-top:64px;background:var(--mg-navy)}
 }
@@ -392,3 +393,27 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 
 /* 領収書のインボイス対応を目立たせる */
 .mg-invoice{display:inline-block;margin-top:9px;padding:5px 12px;border:1px solid var(--mg-wine);color:var(--mg-wine);font:700 12px sans-serif;letter-spacing:.04em}
+
+/* ===== スマホ：店名の追従位置と、ハンバーガーメニューの体裁 ===== */
+@media(max-width:900px){
+/* 追従開始時に位置が飛ばないよう、ヘッダー(72px)＋通常位置(15px)に合わせる */
+.mg-hero-name.is-following{top:87px;right:14px}
+
+/* メニューは明朝で大きめに、行間と罫線でゆったり見せる */
+.mg-nav{padding:76px 26px 34px;gap:0;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:15px;font-weight:400;letter-spacing:.14em}
+.mg-nav a{position:relative;padding:16px 2px 16px 20px;border-bottom:1px solid #ffffff1c}
+.mg-nav a:last-child{border-bottom:0}
+.mg-nav a:before{content:"";position:absolute;left:0;top:50%;width:9px;height:1px;background:var(--mg-gold);transform:translateY(-50%)}
+/* 開いたときに上から順に現れる */
+.mg-header.is-open .mg-nav a{animation:mg-nav-in .45s cubic-bezier(.16,1,.3,1) both}
+.mg-header.is-open .mg-nav a:nth-child(2){animation-delay:.05s}
+.mg-header.is-open .mg-nav a:nth-child(3){animation-delay:.1s}
+.mg-header.is-open .mg-nav a:nth-child(4){animation-delay:.15s}
+.mg-header.is-open .mg-nav a:nth-child(5){animation-delay:.2s}
+.mg-header.is-open .mg-nav a:nth-child(6){animation-delay:.25s}
+.mg-header.is-open .mg-nav a:nth-child(7){animation-delay:.3s}
+}
+@keyframes mg-nav-in{from{opacity:0;transform:translateX(-14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+.mg-header.is-open .mg-nav a{animation:none}
+}
