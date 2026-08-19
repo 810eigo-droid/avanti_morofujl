@@ -389,3 +389,6 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 @media(max-width:900px){
 #payment{scroll-margin-top:14px}
 }
+
+/* 領収書のインボイス対応を目立たせる */
+.mg-invoice{display:inline-block;margin-top:9px;padding:5px 12px;border:1px solid var(--mg-wine);color:var(--mg-wine);font:700 12px sans-serif;letter-spacing:.04em}
