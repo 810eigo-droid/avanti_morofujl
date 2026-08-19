@@ -361,3 +361,12 @@ html.mg-motion .mg-reveal.is-in,html.mg-motion .mg-pulse{animation:none}
 
 /* アクセス情報：補足行（お支払いの内訳など） */
 .mg-access-info dd small{display:block;margin-top:6px;color:#6f645a;font-size:12px;line-height:1.7}
+
+/* FV右上のロゴ画像。用意されていない間は文字表示のまま */
+.mg-hero-logo{display:block;width:172px;height:auto;opacity:.95;filter:brightness(0) invert(1) drop-shadow(0 2px 10px #0b1219cc)}
+.mg-hero-name.has-logo{gap:0}
+.mg-hero-name.has-logo:before{display:none}
+.mg-hero-name.has-logo .mg-hero-name-text{display:none}
+@media(max-width:900px){
+.mg-hero-logo{width:132px}
+}
